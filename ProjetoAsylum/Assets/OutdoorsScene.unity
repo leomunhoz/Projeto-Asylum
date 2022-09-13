@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.083183885, g: 0.083774865, b: 0.091745645, a: 1}
+  m_IndirectSpecularColor: {r: 0.08334574, g: 0.08387512, b: 0.09182811, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -502,7 +502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839397674}
   m_LocalRotation: {x: 0.20167421, y: -0, z: -0, w: 0.97945267}
-  m_LocalPosition: {x: 0.13800001, y: 7.315, z: 1.298}
+  m_LocalPosition: {x: 0.13800001, y: 7.971, z: 1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -697,7 +697,7 @@ PrefabInstance:
     - target: {fileID: -6453906586705710069, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1,
         type: 3}
       propertyPath: m_Intensity
-      value: 36188.26
+      value: 10489.813
       objectReference: {fileID: 0}
     - target: {fileID: -6453906586705710069, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1,
         type: 3}
@@ -777,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: b66976fe27dd03b49b02412f777eb8b7, type: 3}
     - target: {fileID: 10800000, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1, type: 3}
       propertyPath: m_Intensity
-      value: 20128.53
+      value: 5834.6133
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1, type: 3}
       propertyPath: m_SpotAngle
@@ -801,7 +801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1, type: 3}
       propertyPath: m_BounceIntensity
-      value: 0.35
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10800000, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1, type: 3}
+      propertyPath: m_ColorTemperature
+      value: 7985
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c4cfd35d7e78fb44a0f5522e37c35b1, type: 3}
