@@ -23,6 +23,12 @@ public class PlayerCamera : MonoBehaviour
         
     }
 
+    private void OnValidate()
+    {
+        if (CharacterBody == null) CharacterBody = GetComponent<Transform>();
+        if (CharacterHead == null) CharacterHead = GetComponent<Transform>();
+    }
+
     private void LateUpdate()
     {
         transform.position = CharacterHead.position;

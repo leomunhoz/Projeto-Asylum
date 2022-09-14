@@ -18,6 +18,11 @@ public class Luz : MonoBehaviour
         
     }
 
+    private void OnValidate()
+    {
+        if (luz == null) luz = GetComponent<Light>();
+    }
+
     // Update is called once per frame
     void Update()
     {
