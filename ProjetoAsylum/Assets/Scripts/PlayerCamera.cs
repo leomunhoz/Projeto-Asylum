@@ -6,6 +6,7 @@ public class PlayerCamera : MonoBehaviour
 {
     public Transform CharacterBody;
     public Transform CharacterHead;
+    
 
     private float rotationX = 0;
     private float rotationY = 0;
@@ -25,6 +26,7 @@ public class PlayerCamera : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = CharacterHead.position;
+        
     }
 
     // Update is called once per frame

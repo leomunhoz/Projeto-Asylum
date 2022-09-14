@@ -9,29 +9,35 @@ public class Player : MonoBehaviour
     Vector3 forward;
     Vector3 strafe;
     Vector3 vertical;
-    float forwardspeed = 10f;
-    float strafespeed = 10f;
+   
+    public float forwardspeed = 4f;
+    
+    private float strafespeed = 4f;
 
     private float gravity;
     private float jumpSpeed;
-    private float maxHighJump = 3f;
-    private float timeToMaxHighJump = 0.5f;
+    
+    public float maxHighJump = 3f;
+   
+    public float timeToMaxHighJump = 0.5f;
 
     private bool isWalking;
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;   
         con = GetComponent<CharacterController>();
         Anim = GetComponent<Animator>();
         gravity = (-2 * maxHighJump) / (timeToMaxHighJump * timeToMaxHighJump);
         jumpSpeed = (2 * maxHighJump) / timeToMaxHighJump;
     }
 
-    
+
     // Update is called once per frame
     void Update()
     {
-       
+
 
         float forwardInput = Input.GetAxisRaw("Vertical");
         float strafeInput = Input.GetAxisRaw("Horizontal");
@@ -46,21 +52,21 @@ public class Player : MonoBehaviour
             isWalking = false;
             Anim.SetInteger("state", 0);
         }
-        
+
 
         forward = forwardInput * forwardspeed * transform.forward;
         strafe = strafeInput * strafespeed * transform.right;
 
-        if (Input.GetKey(KeyCode.LeftShift) )
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            forwardspeed = 20f;
+            forwardspeed = 7f;
             Anim.SetInteger("state", 2);
 
         }
         else
         {
 
-            forwardspeed = 10f;
+            forwardspeed = 4f;
             if (isWalking == true)
             {
                 Anim.SetInteger("state", 1);
@@ -69,7 +75,7 @@ public class Player : MonoBehaviour
             {
                 Anim.SetInteger("state", 0);
             }
-            
+
 
 
         }
@@ -97,5 +103,5 @@ public class Player : MonoBehaviour
         Vector3 velocidadeFinal = forward + strafe + vertical;
         con.Move(velocidadeFinal * Time.deltaTime);
     }
-    
+
 }
