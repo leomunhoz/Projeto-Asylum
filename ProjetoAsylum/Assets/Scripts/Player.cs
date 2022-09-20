@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
         forward = forwardInput * forwardspeed * transform.forward;
         strafe = strafeInput * strafespeed * transform.right;
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") != 0)
         {
             forwardspeed = 7f;
             Anim.SetInteger("state", 2);

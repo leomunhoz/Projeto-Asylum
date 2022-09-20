@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3348786}
   - component: {fileID: 2309692}
   m_Layer: 0
-  m_Name: Lamp
+  m_Name: Lampada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

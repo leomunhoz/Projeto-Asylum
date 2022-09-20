@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 3375980}
   - component: {fileID: 2365978}
   m_Layer: 0
-  m_Name: WallDoorWay
+  m_Name: ParedePorta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,6 +6,7 @@ public class PlayerCamera : MonoBehaviour
 {
     public Transform CharacterBody;
     public Transform CharacterHead;
+    public Transform lanterna;
     
 
     private float rotationX = 0;
@@ -32,6 +33,7 @@ public class PlayerCamera : MonoBehaviour
     private void LateUpdate()
     {
         transform.position = CharacterHead.position;
+        
         
     }
 
