@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class PlayerCamera : MonoBehaviour
 {
     public Transform CharacterBody;
     public Transform CharacterHead;
     public Transform lanterna;
-    
+    public PhotonView View;
+
+
+
+
 
     private float rotationX = 0;
     private float rotationY = 0;
@@ -21,7 +27,7 @@ public class PlayerCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private void OnValidate()
@@ -30,26 +36,39 @@ public class PlayerCamera : MonoBehaviour
         if (CharacterHead == null) CharacterHead = GetComponent<Transform>();
     }
 
+
     private void LateUpdate()
     {
-        transform.position = CharacterHead.position;
-        
-        
+
+
+        if (View.IsMine)
+        {
+            transform.position = CharacterHead.position;
+        }
+
+
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxisRaw("Mouse Y") * sensitivityY;
-        float vertical = Input.GetAxisRaw("Mouse X") * sensitivityX;
+        if (View.IsMine)
+        {
 
-        rotationX += vertical;
-        rotationY += horizontal;
+            float horizontal = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+            float vertical = Input.GetAxisRaw("Mouse X") * sensitivityX;
 
-        rotationY = Mathf.Clamp(rotationY, angleYmin, angleYmax);
+            rotationX += vertical;
+            rotationY += horizontal;
 
-        CharacterBody.localEulerAngles = new Vector3(0, rotationX, 0);
+            rotationY = Mathf.Clamp(rotationY, angleYmin, angleYmax);
 
-        transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+            CharacterBody.localEulerAngles = new Vector3(0, rotationX, 0);
+
+            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+        }
     }
 }
