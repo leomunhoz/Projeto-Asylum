@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     private CharacterController con;
     Animator Anim;
+    
     Vector3 forward;
     Vector3 strafe;
     Vector3 vertical;
@@ -48,11 +49,13 @@ public class Player : MonoBehaviour
         {
             isWalking = true;
             Anim.SetInteger("state", 1);
+           
         }
         else
         {
             isWalking = false;
             Anim.SetInteger("state", 0);
+          
         }
 
 
@@ -63,7 +66,7 @@ public class Player : MonoBehaviour
         {
             forwardspeed = 7f;
             Anim.SetInteger("state", 2);
-
+           
         }
         else
         {
@@ -72,10 +75,12 @@ public class Player : MonoBehaviour
             if (isWalking == true)
             {
                 Anim.SetInteger("state", 1);
+                
             }
             else
             {
                 Anim.SetInteger("state", 0);
+               
             }
 
 

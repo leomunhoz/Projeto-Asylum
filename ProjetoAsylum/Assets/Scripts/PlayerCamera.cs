@@ -8,10 +8,10 @@ public class PlayerCamera : MonoBehaviour
 {
     public Transform CharacterBody;
     public Transform CharacterHead;
-    public Transform lanterna;
+
     public PhotonView View;
 
-
+   
 
 
 
@@ -69,6 +69,8 @@ public class PlayerCamera : MonoBehaviour
             CharacterBody.localEulerAngles = new Vector3(0, rotationX, 0);
 
             transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+
+
         }
     }
 }

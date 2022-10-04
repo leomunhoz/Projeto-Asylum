@@ -6,11 +6,13 @@ public class Lanterna : MonoBehaviour
 {
     [SerializeField]
     private Light lanterna;
+    
     // Start is called before the first frame update
     void Start()
     {
         
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -19,5 +21,7 @@ public class Lanterna : MonoBehaviour
         {
             lanterna.enabled = !lanterna.enabled;
         }
+
+     
     }
 }
