@@ -5,11 +5,22 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController con;
+    public Transform CharacterBody;
+    public Transform Head; 
     Animator Anim;
     Vector3 forward;
     Vector3 strafe;
     Vector3 vertical;
-   
+
+    private float rotationX = 0;
+    private float rotationY = 0;
+
+    public float sensitivityX = 0.5f;
+    public float sensitivityY = 0.5f;
+
+    private float angleYmin = -45;
+    private float angleYmax = 45;
+
     public float forwardspeed = 4f;
     
     private float strafespeed = 4f;
@@ -39,10 +50,24 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float Hori = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+        float vert = Input.GetAxisRaw("Mouse X") * sensitivityX;
+
+        rotationX += vert;
+        rotationY += Hori;
+
+        rotationY = Mathf.Clamp(rotationY, angleYmin, angleYmax);
+
+        CharacterBody.localEulerAngles = new Vector3(0, rotationX, 0);
+
+        Head.transform.localEulerAngles = new Vector3(-rotationY, 0);
+
 
 
         float forwardInput = Input.GetAxisRaw("Vertical");
         float strafeInput = Input.GetAxisRaw("Horizontal");
+
+
 
         if (Input.GetAxis("Vertical") != 0)
         {

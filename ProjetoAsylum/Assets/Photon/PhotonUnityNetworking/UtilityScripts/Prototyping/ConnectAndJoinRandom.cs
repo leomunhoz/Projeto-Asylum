@@ -34,7 +34,7 @@ namespace Photon.Pun.UtilityScripts
 
 		/// <summary>Max number of players allowed in room. Once full, a new room will be created by the next connection attemping to join.</summary>
 		[Tooltip("The max number of players allowed in room. Once full, a new room will be created by the next connection attemping to join.")]
-		public byte MaxPlayers = 4;
+		public byte MaxPlayers = 5;
 
         public int playerTTL = -1;
 
