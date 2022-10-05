@@ -181,11 +181,10 @@ namespace Photon.Pun.UtilityScripts
         {
             if (this.PrefabsToInstantiate != null)
             {
-               // foreach (GameObject o in this.PrefabsToInstantiate)
+                foreach (GameObject o in this.PrefabsToInstantiate)
                 {
-                    GameObject o = this.PrefabsToInstantiate[PhotonNetwork.CurrentRoom.PlayerCount -1];
                     if (o == null)
-                        return;
+                        continue;
 #if UNITY_EDITOR
                     Debug.Log("Auto-Instantiating: " + o.name);
 #endif

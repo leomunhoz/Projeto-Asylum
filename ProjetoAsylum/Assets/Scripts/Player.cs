@@ -5,9 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private CharacterController con;
-    public Transform CharacterBody;
-    public Transform Head; 
     Animator Anim;
+    public Transform CharacterBody;
+    public Transform Head;
+    
     Vector3 forward;
     Vector3 strafe;
     Vector3 vertical;
@@ -50,11 +51,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float Hori = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+        float hori = Input.GetAxisRaw("Mouse Y") * sensitivityY;
         float vert = Input.GetAxisRaw("Mouse X") * sensitivityX;
 
         rotationX += vert;
-        rotationY += Hori;
+        rotationY += hori;
 
         rotationY = Mathf.Clamp(rotationY, angleYmin, angleYmax);
 
@@ -62,22 +63,20 @@ public class Player : MonoBehaviour
 
         Head.transform.localEulerAngles = new Vector3(-rotationY, 0);
 
-
-
         float forwardInput = Input.GetAxisRaw("Vertical");
         float strafeInput = Input.GetAxisRaw("Horizontal");
-
-
 
         if (Input.GetAxis("Vertical") != 0)
         {
             isWalking = true;
             Anim.SetInteger("state", 1);
+           
         }
         else
         {
             isWalking = false;
             Anim.SetInteger("state", 0);
+          
         }
 
 
@@ -88,7 +87,7 @@ public class Player : MonoBehaviour
         {
             forwardspeed = 7f;
             Anim.SetInteger("state", 2);
-
+           
         }
         else
         {
@@ -97,10 +96,12 @@ public class Player : MonoBehaviour
             if (isWalking == true)
             {
                 Anim.SetInteger("state", 1);
+                
             }
             else
             {
                 Anim.SetInteger("state", 0);
+               
             }
 
 
