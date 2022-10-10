@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class Player : MonoBehaviour
 {
     private CharacterController con;
+    public PhotonView View;
     Animator Anim;
     public Transform CharacterBody;
     public Transform Head;
@@ -51,85 +53,90 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float hori = Input.GetAxisRaw("Mouse Y") * sensitivityY;
-        float vert = Input.GetAxisRaw("Mouse X") * sensitivityX;
-
-        rotationX += vert;
-        rotationY += hori;
-
-        rotationY = Mathf.Clamp(rotationY, angleYmin, angleYmax);
-
-        CharacterBody.localEulerAngles = new Vector3(0, rotationX, 0);
-
-        Head.transform.localEulerAngles = new Vector3(-rotationY, 0);
-
-        float forwardInput = Input.GetAxisRaw("Vertical");
-        float strafeInput = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetAxis("Vertical") != 0)
-        {
-            isWalking = true;
-            Anim.SetInteger("state", 1);
-           
-        }
-        else
-        {
-            isWalking = false;
-            Anim.SetInteger("state", 0);
-          
-        }
-
-
-        forward = forwardInput * forwardspeed * transform.forward;
-        strafe = strafeInput * strafespeed * transform.right;
-
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") != 0)
-        {
-            forwardspeed = 7f;
-            Anim.SetInteger("state", 2);
-           
-        }
-        else
+        if (View.IsMine)
         {
 
-            forwardspeed = 4f;
-            if (isWalking == true)
+
+            float hori = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+            float vert = Input.GetAxisRaw("Mouse X") * sensitivityX;
+
+            rotationX += vert;
+            rotationY += hori;
+
+            rotationY = Mathf.Clamp(rotationY, angleYmin, angleYmax);
+
+            CharacterBody.localEulerAngles = new Vector3(0, rotationX, 0);
+
+            Head.transform.localEulerAngles = new Vector3(-rotationY, 0);
+
+            float forwardInput = Input.GetAxisRaw("Vertical");
+            float strafeInput = Input.GetAxisRaw("Horizontal");
+
+            if (Input.GetAxis("Vertical") != 0)
             {
+                isWalking = true;
                 Anim.SetInteger("state", 1);
-                
+
             }
             else
             {
+                isWalking = false;
                 Anim.SetInteger("state", 0);
-               
+
             }
 
 
+            forward = forwardInput * forwardspeed * transform.forward;
+            strafe = strafeInput * strafespeed * transform.right;
 
-        }
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") != 0)
+            {
+                forwardspeed = 7f;
+                Anim.SetInteger("state", 2);
 
-        vertical += gravity * Time.deltaTime * Vector3.up;
-        if (con.isGrounded)
-        {
-            vertical = Vector3.down;
-        }
+            }
+            else
+            {
 
-        if (Input.GetKeyDown(KeyCode.Space) && con.isGrounded)
-        {
-            vertical = jumpSpeed * Vector3.up;
-            Anim.SetInteger("state", 3);
-        }
-        else
-        {
+                forwardspeed = 4f;
+                if (isWalking == true)
+                {
+                    Anim.SetInteger("state", 1);
 
-        }
-        if (vertical.y > 0 && (con.collisionFlags & CollisionFlags.Above) != 0)
-        {
-            vertical = Vector3.zero;
-        }
+                }
+                else
+                {
+                    Anim.SetInteger("state", 0);
 
-        Vector3 velocidadeFinal = forward + strafe + vertical;
-        con.Move(velocidadeFinal * Time.deltaTime);
+                }
+
+
+
+            }
+
+            vertical += gravity * Time.deltaTime * Vector3.up;
+            if (con.isGrounded)
+            {
+                vertical = Vector3.down;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && con.isGrounded)
+            {
+                vertical = jumpSpeed * Vector3.up;
+                Anim.SetInteger("state", 3);
+            }
+            else
+            {
+
+            }
+            if (vertical.y > 0 && (con.collisionFlags & CollisionFlags.Above) != 0)
+            {
+                vertical = Vector3.zero;
+            }
+
+            Vector3 velocidadeFinal = forward + strafe + vertical;
+            con.Move(velocidadeFinal * Time.deltaTime);
+        }
     }
 
 }

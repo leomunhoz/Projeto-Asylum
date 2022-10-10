@@ -842,6 +842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc01e6985e57a24a81575595ba1076c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  View: {fileID: 56656994105686241}
   CharacterBody: {fileID: 2591433381672916039}
   Head: {fileID: 2629019796504130426}
   sensitivityX: 0.5

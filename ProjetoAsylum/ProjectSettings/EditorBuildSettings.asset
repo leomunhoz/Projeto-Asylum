@@ -12,5 +12,7 @@ EditorBuildSettings:
     path: Assets/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: a7296536bf9134d40a066d7abe77d2e2,
+      type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 439f9ca7ca7654a41b90b386ffc1b4e1,
       type: 2}
