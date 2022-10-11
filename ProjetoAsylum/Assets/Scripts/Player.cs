@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     Vector3 strafe;
     Vector3 vertical;
 
+    private bool podePular = true;
+
     private float rotationX = 0;
     private float rotationY = 0;
 
@@ -114,24 +116,29 @@ public class Player : MonoBehaviour
 
             }
 
-            vertical += gravity * Time.deltaTime * Vector3.up;
-            if (con.isGrounded)
-            {
-                vertical = Vector3.down;
-            }
-
-            if (Input.GetKeyDown(KeyCode.Space) && con.isGrounded)
-            {
-                vertical = jumpSpeed * Vector3.up;
-                Anim.SetInteger("state", 3);
-            }
-            else
+            if (gameObject.tag == "Player")
             {
 
-            }
-            if (vertical.y > 0 && (con.collisionFlags & CollisionFlags.Above) != 0)
-            {
-                vertical = Vector3.zero;
+
+                vertical += gravity * Time.deltaTime * Vector3.up;
+                if (con.isGrounded)
+                {
+                    vertical = Vector3.down;
+                }
+
+                if (Input.GetKeyDown(KeyCode.Space) && con.isGrounded)
+                {
+                    vertical = jumpSpeed * Vector3.up;
+                    Anim.SetInteger("state", 3);
+                }
+                else
+                {
+
+                }
+                if (vertical.y > 0 && (con.collisionFlags & CollisionFlags.Above) != 0)
+                {
+                    vertical = Vector3.zero;
+                }
             }
 
             Vector3 velocidadeFinal = forward + strafe + vertical;

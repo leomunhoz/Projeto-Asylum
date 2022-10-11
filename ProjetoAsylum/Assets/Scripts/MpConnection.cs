@@ -6,10 +6,12 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class MultiplayerConnection : MonoBehaviourPunCallbacks
+public class MpConnection : MonoBehaviourPunCallbacks
 {
     public Text connectionLog;
     public Player mySelf;
+    
+
 
     //--------------------------------------------------------
     void Start()
@@ -44,11 +46,13 @@ public class MultiplayerConnection : MonoBehaviourPunCallbacks
     {
         connectionLog.text += "Entrei na SALA: PUCC!\n";
 
-        Vector3 pos = Random.insideUnitSphere * 5;
+        Vector3 pos = Random.insideUnitSphere;
         pos.y = 1;
 
         GameObject player = PhotonNetwork.Instantiate("Player", pos, Quaternion.identity);
+       
         mySelf = player.GetComponent<Player>();
+       
     }
 
     //--------------------------------------------------------

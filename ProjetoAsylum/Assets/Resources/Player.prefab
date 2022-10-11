@@ -845,8 +845,8 @@ MonoBehaviour:
   View: {fileID: 56656994105686241}
   CharacterBody: {fileID: 2591433381672916039}
   Head: {fileID: 2629019796504130426}
-  sensitivityX: 0.5
-  sensitivityY: 0.5
+  sensitivityX: 2.5
+  sensitivityY: 2.5
   forwardspeed: 4
   maxHighJump: 1
   timeToMaxHighJump: 0.5
