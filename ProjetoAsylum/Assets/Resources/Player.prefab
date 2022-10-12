@@ -845,6 +845,10 @@ MonoBehaviour:
   View: {fileID: 56656994105686241}
   CharacterBody: {fileID: 2591433381672916039}
   Head: {fileID: 2629019796504130426}
+  vertical: {x: 0, y: 0, z: 0}
+  forwardInput: 0
+  strafeInput: 0
+  velocidadeFinal: {x: 0, y: 0, z: 0}
   sensitivityX: 2.5
   sensitivityY: 2.5
   forwardspeed: 4

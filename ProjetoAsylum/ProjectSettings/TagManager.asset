@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ligar
   - Ligado
+  - Mob
   layers:
   - Default
   - TransparentFX

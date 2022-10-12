@@ -13,9 +13,14 @@ public class Player : MonoBehaviour
     
     Vector3 forward;
     Vector3 strafe;
-    Vector3 vertical;
+    public Vector3 vertical;
 
     private bool podePular = true;
+
+    public float forwardInput;
+    public float strafeInput;
+
+    public Vector3 velocidadeFinal;
 
     private float rotationX = 0;
     private float rotationY = 0;
@@ -47,6 +52,7 @@ public class Player : MonoBehaviour
         Anim = GetComponent<Animator>();
         gravity = (-2 * maxHighJump) / (timeToMaxHighJump * timeToMaxHighJump);
         jumpSpeed = (2 * maxHighJump) / timeToMaxHighJump;
+        vertical = Vector3.zero;
     }
 
 
@@ -71,8 +77,8 @@ public class Player : MonoBehaviour
 
             Head.transform.localEulerAngles = new Vector3(-rotationY, 0);
 
-            float forwardInput = Input.GetAxisRaw("Vertical");
-            float strafeInput = Input.GetAxisRaw("Horizontal");
+             forwardInput = Input.GetAxis("Vertical");
+             strafeInput = Input.GetAxis("Horizontal");
 
             if (Input.GetAxis("Vertical") != 0)
             {
@@ -140,8 +146,8 @@ public class Player : MonoBehaviour
                     vertical = Vector3.zero;
                 }
             }
-
-            Vector3 velocidadeFinal = forward + strafe + vertical;
+            
+            velocidadeFinal = forward + strafe + vertical;
             con.Move(velocidadeFinal * Time.deltaTime);
         }
     }
