@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 
@@ -36,6 +37,7 @@ public class MpConnection : MonoBehaviourPunCallbacks
 
 
         PhotonNetwork.JoinLobby();
+        StartCoroutine(Play());
     }
 
     //--------------------------------------------------------
@@ -53,7 +55,7 @@ public class MpConnection : MonoBehaviourPunCallbacks
     //--------------------------------------------------------
     public override void OnJoinedRoom()
     {
-        connectionLog.text += "Entrei na SALA: PUCC!\n";
+        //connectionLog.text += "Entrei na SALA: PUCC!\n";
 
         Vector3 pos = Spawn[PhotonNetwork.CurrentRoom.PlayerCount - 1].position;
        
@@ -77,13 +79,13 @@ public class MpConnection : MonoBehaviourPunCallbacks
     //--------------------------------------------------------
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
     {
-        connectionLog.text += "Player: " + newPlayer.NickName + " entrou na SALA: PUCC!\n";
+        connectionLog.text += "Player: " + newPlayer.NickName + " entrou na SALA\n";
 
     }
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
     {
-        connectionLog.text += "Player: " + otherPlayer.NickName + " saiu da SALA: PUCC!\n";
+        connectionLog.text += "Player: " + otherPlayer.NickName + " saiu da SALA\n";
     }
 
     public void enterValues()
@@ -98,5 +100,12 @@ public class MpConnection : MonoBehaviourPunCallbacks
             PhotonNetwork.LocalPlayer.NickName = nickName;
             PhotonNetwork.ConnectUsingSettings();
         }
+    }
+
+    public IEnumerator Play() 
+    {
+        SceneManager.LoadScene(1);
+        //PhotonNetwork.JoinLobby();
+        yield return new WaitForSeconds(1);
     }
 }
