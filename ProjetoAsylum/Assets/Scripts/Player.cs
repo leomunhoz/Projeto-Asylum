@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private CharacterController con;
     public PhotonView View;
     Animator Anim;
-    Animator Cam;
+    
     public Transform CharacterBody;
     public Transform Head;
     

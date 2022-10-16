@@ -7,6 +7,7 @@ public class LiberarAcesso : MonoBehaviour
     
     private static int count = 0;
     public Animator porta;
+    
     public Animator ligar;
     bool EstaTrigado;
 
@@ -14,8 +15,12 @@ public class LiberarAcesso : MonoBehaviour
     {
         
     }
-
-     void Update()
+    private void OnValidate()
+    {
+        if (porta == null) porta = GetComponent<Animator>();
+       
+    }
+    void Update()
     {
         if (EstaTrigado)
         {

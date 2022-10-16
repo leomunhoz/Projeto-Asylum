@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 2513936155511086444}
   - component: {fileID: 3600791699039891541}
   - component: {fileID: 1149179905277874032}
+  - component: {fileID: 1916742742}
   m_Layer: 0
   m_Name: ElectricalPanel
   m_TagString: Untagged
@@ -115,6 +116,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &1916742742
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975906789664866838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2af1143ebefa7f34b8d29d2de82e968b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2994695747161409738
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,14 +161,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2994695747161409738}
-  m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0.0020999925, y: -0.1896, z: -0.13979998}
+  m_LocalRotation: {x: -0.67912465, y: -0.1969514, z: 0.19695164, w: 0.6791245}
+  m_LocalPosition: {x: 0.1431933, y: -0.1578508, z: -0.13979986}
   m_LocalScale: {x: 2.54, y: 2.5399992, z: 2.5399995}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6601026333310449142}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -57.655, y: -90, z: 90}
 --- !u!33 &5362608038845727589
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -207,9 +228,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5333504732686925598}
+  - component: {fileID: 1219610288}
+  - component: {fileID: 1916742739}
+  - component: {fileID: 1219610289}
   m_Layer: 0
   m_Name: PainelEletrico
-  m_TagString: Untagged
+  m_TagString: Ligar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,3 +255,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1219610288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706185638219310500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7235293, y: 1, z: 1}
+  m_Center: {x: 0.34730905, y: 0, z: 1.3828457e-15}
+--- !u!95 &1916742739
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706185638219310500}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2af1143ebefa7f34b8d29d2de82e968b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1219610289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706185638219310500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d29b461c09b744ea313b9318eba880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porta: {fileID: 0}
+  porta02: {fileID: 0}
+  ligar: {fileID: 1916742739}

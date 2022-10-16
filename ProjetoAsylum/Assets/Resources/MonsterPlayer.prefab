@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 1572808102155025083}
   - component: {fileID: 934036127600856016}
   - component: {fileID: 2400355890839493476}
-  - component: {fileID: 6955931873420432681}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -339,26 +338,6 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
---- !u!95 &6955931873420432681
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418335190239760555}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e65185e5d5eb2d041823619787594a07, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &517844064422862859
 GameObject:
   m_ObjectHideFlags: 0
