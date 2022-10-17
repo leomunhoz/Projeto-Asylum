@@ -7,9 +7,6 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.21382318" = ""
-	"OpenInspectorPreview.21382318" = "0"
-	"currentGroup.21382318" = "asset"
 }
 providers = {
 	at = {
