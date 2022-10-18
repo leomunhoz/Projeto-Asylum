@@ -56,10 +56,10 @@ public class MpConnection : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         //connectionLog.text += "Entrei na SALA: PUCC!\n";
-        Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
+
         Vector3 pos = Spawn[PhotonNetwork.CurrentRoom.PlayerCount - 1].position;
        
-        string prefabNane = "MonsterPlayer";
+        string prefabNane = "Player";
        
        if( PhotonNetwork.CurrentRoom.PlayerCount > 1)
         {
@@ -79,7 +79,7 @@ public class MpConnection : MonoBehaviourPunCallbacks
     //--------------------------------------------------------
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
     {
-        connectionLog.text += "Player: " + newPlayer.NickName + " entrou na SALA\n" + room;
+        connectionLog.text += "Player: " + newPlayer.NickName + " entrou na SALA\n";
 
     }
 
@@ -104,9 +104,8 @@ public class MpConnection : MonoBehaviourPunCallbacks
 
     public IEnumerator Play() 
     {
-        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
-       
-        
+        //PhotonNetwork.JoinLobby();
+        yield return new WaitForSeconds(1);
     }
 }
