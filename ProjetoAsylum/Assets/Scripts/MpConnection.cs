@@ -56,7 +56,7 @@ public class MpConnection : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         //connectionLog.text += "Entrei na SALA: PUCC!\n";
-
+        Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Vector3 pos = Spawn[PhotonNetwork.CurrentRoom.PlayerCount - 1].position;
        
         string prefabNane = "MonsterPlayer";
@@ -104,9 +104,8 @@ public class MpConnection : MonoBehaviourPunCallbacks
 
     public IEnumerator Play() 
     {
-        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
-       
-       
+        //PhotonNetwork.JoinLobby();
+        yield return new WaitForSeconds(1);
     }
 }

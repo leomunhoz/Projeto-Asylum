@@ -138,7 +138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5728840430739816964}
   - component: {fileID: 1572808102155025083}
-  - component: {fileID: 934036127600856016}
   - component: {fileID: 2400355890839493476}
   m_Layer: 0
   m_Name: Camera
@@ -205,14 +204,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &934036127600856016
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418335190239760555}
-  m_Enabled: 1
 --- !u!114 &2400355890839493476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,8 +1330,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 3
+    SynchronizeType: 0
+    Name: state
+  - Type: 1
+    SynchronizeType: 0
+    Name: Blend
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &2378776792041462675
 GameObject:
   m_ObjectHideFlags: 0
