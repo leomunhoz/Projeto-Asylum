@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
         gravity = (-2 * maxHighJump) / (timeToMaxHighJump * timeToMaxHighJump);
         jumpSpeed = (2 * maxHighJump) / timeToMaxHighJump;
         vertical = Vector3.zero;
+        Head.gameObject.SetActive(View.IsMine);
     }
 
 
@@ -76,7 +77,7 @@ public class Player : MonoBehaviour
 
             CharacterBody.localEulerAngles = new Vector3(0, rotationX, 0);
 
-            Head.transform.localEulerAngles = new Vector3(-rotationY, 0);
+            Head.localEulerAngles = new Vector3(-rotationY, 0);
 
              forwardInput = Input.GetAxis("Vertical");
              strafeInput = Input.GetAxis("Horizontal");
