@@ -27,7 +27,7 @@ public class LiberarAcesso : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && gameObject.tag == "Ligar")
             {
                 count++;
-                ligar.SetTrigger("Ligar");
+                ligar.SetInteger("state", 1);
                 gameObject.tag = "Ligado";
             }
            
@@ -35,7 +35,7 @@ public class LiberarAcesso : MonoBehaviour
 
         if (count == 4)
         {
-            porta.SetTrigger("Abrir");
+            porta.SetInteger("state", 1);
             Debug.Log("Aberto");
             
         }
@@ -43,7 +43,7 @@ public class LiberarAcesso : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
             EstaTrigado = true;
         }
@@ -51,7 +51,7 @@ public class LiberarAcesso : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.tag == "Player")
         {
             EstaTrigado = false;
         }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17980957, g: 0.17980957, b: 0.17980957, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9b49e132596304bb09dd82976686a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auxChaves: {fileID: 1374920474}
+  auxChaves: {fileID: 1768885797}
   idChaves: 1
 --- !u!65 &973851425
 BoxCollider:
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78688a3445332f4db16708b1886e6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auxChaves: {fileID: 1374920474}
+  auxChaves: {fileID: 1768885797}
   idChaves: 0
   Trigger: 0
 --- !u!65 &1281472716
@@ -759,25 +759,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 2.5}
   m_Center: {x: 0.57109666, y: 1.3643621, z: 0.059319373}
---- !u!1 &1374920465 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2935588580292316925, guid: 6c18c94343a4f9543baf87e6fe17546a,
+--- !u!114 &1768885797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6111476009522745506, guid: 6c18c94343a4f9543baf87e6fe17546a,
     type: 3}
   m_PrefabInstance: {fileID: 2145826907}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1374920474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374920465}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acc914ba8a84eb040a57afffa0b06f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaves: 00000000
 --- !u!1 &2086335231
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9b49e132596304bb09dd82976686a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auxChaves: {fileID: 1374920474}
+  auxChaves: {fileID: 1768885797}
   idChaves: 0
 --- !u!65 &2086335234
 BoxCollider:
@@ -917,6 +910,11 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 413042371745431775, guid: 6c18c94343a4f9543baf87e6fe17546a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.43
+      objectReference: {fileID: 0}
     - target: {fileID: 2591433381672916039, guid: 6c18c94343a4f9543baf87e6fe17546a,
         type: 3}
       propertyPath: m_RootOrder
@@ -976,6 +974,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104988125204404153, guid: 6c18c94343a4f9543baf87e6fe17546a,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288151603297983759, guid: 6c18c94343a4f9543baf87e6fe17546a,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c18c94343a4f9543baf87e6fe17546a, type: 3}
