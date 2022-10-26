@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: -2164964073667055674
     second: Armature.004|Walking
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cor Roupa.010
+    second: {fileID: 2100000, guid: 41455c5f99f459d44b0a97efe4c0736b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cor Sombrancelha.010
+    second: {fileID: 2100000, guid: bbe118e037231d24bae9c1b7ce075423, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pele.010
+    second: {fileID: 2100000, guid: 28253956b5a71c34eabb90dbf34f2f46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textura Olhos .010
+    second: {fileID: 2100000, guid: 51c643a29c2750d48a6d7a520cbe6f8b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
