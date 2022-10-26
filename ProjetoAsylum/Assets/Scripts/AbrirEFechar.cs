@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class AbrirEFechar : MonoBehaviour
 {
     public Animator porta;
+    public PhotonView view;
     
-    bool abrir = true;
-    bool fechar = false;
+    bool IsOpen = true;
+
     public bool EstaTrigado;
     
 
@@ -27,33 +30,45 @@ public class AbrirEFechar : MonoBehaviour
     {
         if (EstaTrigado)
         {
-            if (Input.GetKeyDown(KeyCode.E) && abrir == true && fechar == false)
+            if (Input.GetKeyDown(KeyCode.E) && !IsOpen)
             {
-                porta.SetTrigger("Abrir");
-                fechar = true;
-                abrir = false;
+                porta.SetInteger("state", 1);
+                IsOpen = true;
             }
-            else if (Input.GetKeyDown(KeyCode.E) && abrir == false && fechar == true)
+            else if (Input.GetKeyDown(KeyCode.E) && IsOpen)
             {
-                porta.SetTrigger("Fechar");
-                fechar = false;
-                abrir = true;
+                porta.SetInteger("state", 0);
+                IsOpen = false;
             }
         }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        /*if (other.gameObject.CompareTag("Player"))
         {
             EstaTrigado = true;
+        }*/
+
+        if (other.gameObject.tag == "Player" && !EstaTrigado)
+        {
+            
+            EstaTrigado = true;
+
         }
-       
+
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        /*if (other.gameObject.CompareTag("Player"))
         {
             EstaTrigado = false;
+        }*/
+
+        if (other.gameObject.tag == "Player" && EstaTrigado)
+        {
+
+            EstaTrigado = false;
+
         }
     }
 
