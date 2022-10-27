@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 148
+  controlID: 184
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 40
+  controlID: 113
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 41
+  controlID: 114
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 92
+  controlID: 90
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -451,10 +451,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 614}
+      scrollPos: {x: 0, y: 32}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 583affff583bffff863dffff8240ffffc040ffff0a41ffff1842ffff3845ffff9c66ffffe0f0ffff1cfaffff0e7d0000b67e0000f27e00000e7f0000187f000086810000
+      m_ExpandedIDs: 86bdffff1cfaffff287d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -737,9 +737,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.14757156, y: -2.8479786, z: 32.003906}
+    m_Target: {x: 9.91624, y: 0.16257715, z: 41.47242}
     speed: 2
-    m_Value: {x: -0.14757156, y: -2.8479786, z: 32.003906}
+    m_Value: {x: 9.91624, y: 0.16257715, z: 41.47242}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -786,13 +786,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.026291257, y: -0.9635866, z: 0.24592917, w: -0.10270137}
+    m_Target: {x: -0.0007270555, y: 0.99538535, z: -0.09675311, w: -0.008678657}
     speed: 2
-    m_Value: {x: -0.026442315, y: -0.96311116, z: 0.24734719, w: -0.1026506}
+    m_Value: {x: -0.00087208446, y: 0.9952573, z: -0.09674084, w: -0.01017056}
   m_Size:
-    m_Target: 26.484695
+    m_Target: 12.36738
     speed: 2
-    m_Value: 26.484695
+    m_Value: 12.36738
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1011,22 +1011,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Horror Hospital Pack/Prefabs
+    - Assets/Players/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Horror Hospital Pack/Prefabs
+  - Assets/Players/Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\guilh\Documents\GitHub\Projeto-Asylum\Projeto-Asylum\Projeto-Asylum\ProjetoAsylum
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 54}
-    m_SelectedIDs: 62890000
-    m_LastClickedID: 35170
-    m_ExpandedIDs: 00000000b4860000b6860000b8860000ba860000bc86000000ca9a3b
+    m_SelectedIDs: ea8b0000
+    m_LastClickedID: 35818
+    m_ExpandedIDs: 00000000f0870000f2870000f4870000f6870000f8870000a48a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1054,7 +1054,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b4860000b6860000b8860000ba860000bc860000
+    m_ExpandedIDs: 00000000f0870000f2870000f4870000f6870000f8870000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1085,18 +1085,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000060720000d27a00002897000000000000e49e0000e89e0000029f0000a8a00000d29e0000d89e0000de9e0000069f0000229f0000089f00009a9e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Materials
+      m_OriginalName: Materials
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 35818
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:

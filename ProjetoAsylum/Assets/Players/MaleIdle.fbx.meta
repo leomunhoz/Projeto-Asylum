@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: 4699274299699868179
     second: Armature.001|Idle
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cor Roupa
+    second: {fileID: 2100000, guid: 0a462264c9feedb4faa50740b5c22696, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cor Sombrancelha e Cabelo
+    second: {fileID: 2100000, guid: ee9b599be8dc937438c5f0b622328b59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pele Personagem Homem
+    second: {fileID: 2100000, guid: bd07699847849d5418aeacf2e6282e66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textura Olhos_
+    second: {fileID: 2100000, guid: e608581091837334590e0334a2273a1f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
