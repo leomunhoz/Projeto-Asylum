@@ -4,29 +4,9 @@ ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
-      74: -8953971756418326654
-    second: Armature.006|Idle
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cor Sombrancelha Mulher.001
-    second: {fileID: 2100000, guid: 734e98b08df93a44681c7f9ee8ff53a2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Eyeball _ Pixel Eyeball Generator V2.001
-    second: {fileID: 2100000, guid: bc8da3062a50eed419bde28cfec43383, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Human Skin.001
-    second: {fileID: 2100000, guid: ef0ced591df37f542992b3bde47bab89, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: 01771939e635908499cd5931ccaf7f7b, type: 2}
+      74: -5048638200688491435
+    second: Armature.006|Idle.001
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
