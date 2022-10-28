@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 139
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 140
+  controlID: 138
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 141
+  controlID: 139
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 49
+  controlID: 75
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -451,24 +451,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 6}
+      scrollPos: {x: 0, y: 7526}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f8c5ffff14ceffff2ad4ffffbce1ffff1cfaffff267e0000
+      m_ExpandedIDs: 4a72ffffe273ffffe473ffff0c75ffff0e75ffff2886ffff9ac0ffff9cc0fffffec0ffff00c1ffff92c1ffff94c1ffffeec2fffff0c2ffff0ee3ffff20e3ffff50e3ffff66e3ffff7ae3ffffb2e3fffff8e3ffff30e4ffff82e4ffff96e4fffface4ffffbee4ffffdae4fffff0e4ffff02e5ffff36e5ffff60e5ffff64e5ffff90e5ffffa6e5ffffd2e5fffff4e5fffff8e5ffff0ee6ffff26e6ffff38e6ffff58e6ffff72e6ffff78e6ffffa2e6ffffa6e6ffffc8e6fffff0e6fffff4e6ffff8ee7ffffb8e7ffffcee7ffffe8e7ffff40e8ffff44e8ffff56e8ffff7ce8ffff90e8ffffb2e8ffffc0e8ffffd6e8fffff4e8fffffae8ffff2ce9ffffb6e9ffffdce9ffff00eaffff16eaffff28eaffff7ceaffff7eeaffff98eaffffaaeaffffb0eaffffcaeaffffdceaffffeceaffff02ebffff14ebffff2eebffff46ebffff8cebffffe6ebffffeaebfffffcebffff1eecffff70ecffff9aecffff9eecffffeaecffff0cedffff36edffff7cedffff80edffff62eeffff84eeffffcaeeffffceeeffff6aefffff84efffffa6efffffaaefffffd0efffffe2efffff3cf0ffff40f0ffffb4f0ffffb8f0ffffbef0ffffd0f0ffffd6f0ffffecf0ffff02f1ffff14f1ffff26f1ffff48f1ffff5af1ffff7cf1ffff96f1ffffaef1ffff1ef2ffff72f2ffff76f2ffff90f2ffffc0f2ffffd4f2ffff14f3ffff3ef3ffff70f3ffff82f3ffff9cf3ffffb8f3ffffe4f3fffff8f3ffff10f4ffff32f4ffff36f4ffff5cf4ffff1cfaffff74830000e8830000148400002a8400006a8400006e840000b6840000bc84000046850000628500006a85000084850000fa8500002e8600003e8600005486000058860000688600009086000094860000b6860000ba860000c0860000ce860000e28600006a870000bc8700005a8800008288000092880000d6880000e4880000148900003c890000628900007a890000828900008c890000a0890000a8890000ba890000e68900001e8a00002c8a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Sombrancelha.006
-        m_OriginalName: Sombrancelha.006
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -15148
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -737,9 +737,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.3154125, y: -63.54667, z: -95.28169}
+    m_Target: {x: 10.9032345, y: -2.1386986, z: 44.93139}
     speed: 2
-    m_Value: {x: 5.3154125, y: -63.54667, z: -95.28169}
+    m_Value: {x: 10.9032345, y: -2.1386986, z: 44.93139}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -786,13 +786,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0126049295, y: -0.0029960843, z: 0.00005027774, w: 1.0000403}
+    m_Target: {x: 0.009782697, y: 0.7791185, z: -0.62669754, w: 0.0121653285}
     speed: 2
-    m_Value: {x: -0.012603425, y: -0.0044955825, z: 0.0000313664, w: 0.9999105}
+    m_Value: {x: 0.008842556, y: 0.77912843, z: -0.6267055, w: 0.010996533}
   m_Size:
-    m_Target: 6.5459247
+    m_Target: 17.906311
     speed: 2
-    m_Value: 6.5459247
+    m_Value: 17.135225
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1011,22 +1011,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Players/Materials
+    - Assets/ScifiOfficeLite/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Players/Materials
+  - Assets/ScifiOfficeLite/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\guilh\Documents\GitHub\Projeto-Asylum\Projeto-Asylum\Projeto-Asylum\ProjetoAsylum
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 54}
-    m_SelectedIDs: e8820000
-    m_LastClickedID: 33512
-    m_ExpandedIDs: 000000004e82000050820000528200005482000056820000d682000000ca9a3b
+    m_SelectedIDs: e2ba0000
+    m_LastClickedID: 47842
+    m_ExpandedIDs: 000000004e82000050820000528200005482000056820000d6820000da82000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1085,18 +1085,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c623000060720000d27a00002897000000000000e49e0000e89e0000029f0000a8a00000d29e0000d89e0000de9e0000069f0000229f0000089f00009a9e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Sci-Fi Office Pack Documentation
+      m_OriginalName: Sci-Fi Office Pack Documentation
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 47844
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
