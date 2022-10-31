@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 1219610288}
   - component: {fileID: 1916742739}
   - component: {fileID: 1219610289}
+  - component: {fileID: 7679359844644135525}
   m_Layer: 0
   m_Name: PainelEletrico
   m_TagString: Ligar
@@ -355,11 +356,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4706185638219310500}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7235293, y: 1, z: 1}
-  m_Center: {x: 0.34730905, y: 0, z: 1.3828457e-15}
+  m_Size: {x: 0.18194906, y: 0.5116983, z: 0.37067255}
+  m_Center: {x: 0.000020235777, y: 0.20584914, z: -0.026720375}
 --- !u!95 &1916742739
 Animator:
   serializedVersion: 4
@@ -394,3 +395,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porta: {fileID: 1916742739}
   ligar: {fileID: 1916742739}
+--- !u!136 &7679359844644135525
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4706185638219310500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.1
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

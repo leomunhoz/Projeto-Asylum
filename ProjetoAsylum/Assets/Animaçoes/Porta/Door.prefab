@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 551669169842504331}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0608518, y: 1.7267294, z: 2.297493}
+  m_LocalScale: {x: 2.0608516, y: 1.726729, z: 2.297493}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2475321638433888659}
@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 2475321638431993345}
   - component: {fileID: 2475321638436255555}
   - component: {fileID: 2475321638055535126}
-  - component: {fileID: 4733803372974872379}
   - component: {fileID: 7759574206806560004}
   - component: {fileID: 4745720986009058387}
+  - component: {fileID: 554482751255362428}
   m_Layer: 0
   m_Name: DoorMesh
   m_TagString: Untagged
@@ -63,8 +63,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2475321638434246017}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.0427, z: 0}
-  m_LocalScale: {x: 0.45321834, y: 0.6226731, z: 0.49818188}
+  m_LocalPosition: {x: -0, y: 0.0196, z: -0.0633}
+  m_LocalScale: {x: 0.44705057, y: 0.6129594, z: 0.49818188}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 98458254403870262}
@@ -155,19 +155,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!65 &4733803372974872379
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2475321638434246017}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9477253, y: 2.460666, z: 4.848503}
-  m_Center: {x: 1.361992, y: 0.3735657, z: -0.050599437}
 --- !u!114 &7759574206806560004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +190,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &554482751255362428
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475321638434246017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 4.21
+  m_Height: 4.7555614
+  m_Direction: 1
+  m_Center: {x: 1.3070121, y: 0.000000119209275, z: 0.0780994}

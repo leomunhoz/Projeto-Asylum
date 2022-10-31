@@ -11,7 +11,11 @@ public class Gerador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Luz[0].enabled = false;
+        Luz[1].enabled = false;
+        Luz[2].enabled = false;
+        Luz[3].enabled = false;
+        Luz[4].enabled = false;
     }
 
     // Update is called once per frame
@@ -19,13 +23,17 @@ public class Gerador : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && gameObject.tag == "ligar")
         {
-            Luz[Luz.Length].enabled = true;
-            gameObject.tag = "liagdo";
+            Luz[0].enabled = true;
+            Luz[1].enabled = true;
+            Luz[2].enabled = true;
+            Luz[3].enabled = true;
+            Luz[4].enabled = true;
+            gameObject.tag = "ligado";
             count++;
             StartCoroutine(Desligar());
 
         }
-        if (count == 4)
+        if (count == 2)
         {
             Debug.Log("VITORIA");
         }

@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class PortaChave : MonoBehaviour
+public class PortaChave : InventarioChaves
 {
-    public InventarioChaves auxChaves;
+    public Player auxChaves;
     public int idChaves;
     public bool Trigger;
-     Animator porta;
+    Animator porta;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
        porta = GetComponent<Animator>();
+       auxChaves = GetComponent<Player>();
+    }
+
+    private void OnValidate()
+    {
+        if (auxChaves == null) auxChaves = GetComponent<Player>();
+        
     }
 
     // Update is called once per frame
@@ -19,12 +27,12 @@ public class PortaChave : MonoBehaviour
     {
         if (Trigger)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Ola");
+                Debug.Log("Abriu");
                 if(auxChaves.chaves[idChaves] == true) 
                 {
-                    porta.SetBool("Abrir", true);
+                    porta.SetInteger("state", 1);
                    
                 }
                

@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using System;
 
 public class Player : MonoBehaviour
 {
     private CharacterController con;
     public PhotonView View;
+    public Boolean[] chaves;
     Animator Anim;
     
     public Transform CharacterBody;
     public Transform Head;
+
+    int hitCount;
     
     Vector3 forward;
     Vector3 strafe;
@@ -26,8 +30,8 @@ public class Player : MonoBehaviour
     private float rotationX = 0;
     private float rotationY = 0;
 
-    public float sensitivityX = 0.5f;
-    public float sensitivityY = 0.5f;
+    public float sensitivityX = 2.5f;
+    public float sensitivityY = 2.5f;
 
     private float angleYmin = -45;
     private float angleYmax = 45;
@@ -55,6 +59,11 @@ public class Player : MonoBehaviour
         jumpSpeed = (2 * maxHighJump) / timeToMaxHighJump;
         vertical = Vector3.zero;
         Head.gameObject.SetActive(View.IsMine);
+        chaves = new Boolean[4];
+        chaves[0] = false;
+        chaves[1] = false;
+        chaves[2] = false;
+        chaves[3] = false;
     }
 
 
@@ -65,7 +74,7 @@ public class Player : MonoBehaviour
     {
         if (View.IsMine)
         {
-
+            
 
             float hori = Input.GetAxisRaw("Mouse Y") * sensitivityY;
             float vert = Input.GetAxisRaw("Mouse X") * sensitivityX;
@@ -153,9 +162,28 @@ public class Player : MonoBehaviour
                     vertical = Vector3.zero;
                 }
             }
+
             
             velocidadeFinal = forward + strafe + vertical;
             con.Move(velocidadeFinal * Time.deltaTime);
+
+            if (gameObject.tag == "Mob")
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Anim.SetInteger("state", 3);
+                    
+                }
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            hitCount++;
+            Debug.Log(hitCount);
         }
     }
 
