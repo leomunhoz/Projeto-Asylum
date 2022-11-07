@@ -7,6 +7,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"last_search.DD5CDDE4" = ""
+	"OpenInspectorPreview.DD5CDDE4" = "0"
+	"currentGroup.DD5CDDE4" = "scene"
 }
 providers = {
 	at = {
