@@ -190,6 +190,7 @@ public class Player : MonoBehaviour
                 Anim.SetInteger("state", 3);
                 jumpSpeed = 0;
                 forwardspeed = 2;
+                maxHighJump = 0;
                 Debug.Log("PlayerMorto");
             }
 
