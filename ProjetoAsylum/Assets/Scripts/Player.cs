@@ -181,7 +181,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Mao")
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log(hitCount);
             hitCount++;
@@ -195,6 +195,13 @@ public class Player : MonoBehaviour
         }
     }
     
+    IEnumerator Ataque() 
+    {
+        Debug.Log(hitCount);
+        hitCount++;
+        Debug.Log(hitCount);
+        yield return new WaitForSeconds(15);
+    }
 
    
 
