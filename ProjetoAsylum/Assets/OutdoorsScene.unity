@@ -33884,7 +33884,12 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 17
       objectReference: {fileID: 0}
-    - target: {fileID: 1622262061, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
+    - target: {fileID: 2454306476988460118, guid: 516fd0d5b53125c48abf9d5a06873180,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: sceneViewId
       value: 20
       objectReference: {fileID: 0}
@@ -40462,7 +40467,12 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 19
       objectReference: {fileID: 0}
-    - target: {fileID: 1622262061, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
+    - target: {fileID: 2454306476988460118, guid: 516fd0d5b53125c48abf9d5a06873180,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: sceneViewId
       value: 22
       objectReference: {fileID: 0}
@@ -49000,21 +49010,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.561308
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7267284
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.848585
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4583515
       objectReference: {fileID: 0}
@@ -49067,46 +49062,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 551669169842504331, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5338011
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.60173905
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.018
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0953
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0776
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}
@@ -49926,7 +49881,7 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 1622262061, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
+    - target: {fileID: 0}
       propertyPath: sceneViewId
       value: 21
       objectReference: {fileID: 0}
@@ -49939,6 +49894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneViewId
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2454306476988460118, guid: 516fd0d5b53125c48abf9d5a06873180,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2975906789664866838, guid: 516fd0d5b53125c48abf9d5a06873180,
         type: 3}
@@ -57000,21 +56960,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.0608518
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7267294
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.297493
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3855265
       objectReference: {fileID: 0}
@@ -57068,20 +57013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
-    - target: {fileID: 551669169842504331, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
       propertyPath: sceneViewId
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 35
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}

@@ -25,24 +25,7 @@ public class LiberarAcesso : MonoBehaviour
     }
     void Update()
     {
-        if (EstaTrigado)
-        {
-            if (Input.GetKeyDown(KeyCode.E) && gameObject.tag == "Ligar")
-            {
-                count++;
-                ligar.SetInteger("state", 1);
-                gameObject.tag = "Ligado";
-            }
-           
-        }
-
-        if (count == 4)
-        {
-            porta.SetInteger("state", 1);
-            Debug.Log("Aberto");
-            
-        }
-        
+        Liberar();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -59,7 +42,27 @@ public class LiberarAcesso : MonoBehaviour
             EstaTrigado = false;
         }
     }
+    [PunRPC]
+    public void Liberar() 
+    {
 
+        if (EstaTrigado)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && gameObject.tag == "Ligar")
+            {
+                count++;
+                ligar.SetInteger("state", 1);
+                gameObject.tag = "Ligado";
+            }
 
+        }
+
+        if (count == 4)
+        {
+            porta.SetInteger("state", 1);
+            Debug.Log("Aberto");
+
+        }
+    }
 
 }

@@ -29,19 +29,8 @@ public class AbrirEFechar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EstaTrigado)
-        {
-            if (Input.GetKeyDown(KeyCode.E) && !IsOpen)
-            {
-                porta.SetInteger("state", 1);
-                IsOpen = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && IsOpen)
-            {
-                porta.SetInteger("state", 0);
-                IsOpen = false;
-            }
-        }
+        abrirPorta();
+       
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -65,8 +54,23 @@ public class AbrirEFechar : MonoBehaviour
 
         }
     }
-
-
+    [PunRPC]
+    public void abrirPorta() 
+    {
+        if (EstaTrigado)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && !IsOpen)
+            {
+                porta.SetInteger("state", 1);
+                IsOpen = true;
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && IsOpen)
+            {
+                porta.SetInteger("state", 0);
+                IsOpen = false;
+            }
+        }
+    }
 
 
 
