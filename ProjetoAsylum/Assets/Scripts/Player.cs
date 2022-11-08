@@ -181,7 +181,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Mao")
         {
             Debug.Log(hitCount);
             hitCount++;
@@ -189,7 +189,7 @@ public class Player : MonoBehaviour
 
             if (hitCount == 2)
             {
-                Debug.Log("Morto");
+                Debug.Log("PlayerMorto");
             }
 
         }
