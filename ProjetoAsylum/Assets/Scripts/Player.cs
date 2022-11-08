@@ -187,6 +187,7 @@ public class Player : MonoBehaviour
 
             if (hitCount == 2)
             {
+                Anim.SetInteger("state", 3);
                 Debug.Log("PlayerMorto");
             }
 
