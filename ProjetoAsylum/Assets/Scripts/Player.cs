@@ -161,22 +161,32 @@ public class Player : MonoBehaviour
                 {
                     vertical = Vector3.zero;
                 }
+
+               
             }
 
             
             velocidadeFinal = forward + strafe + vertical;
             con.Move(velocidadeFinal * Time.deltaTime);
 
-           
+            if (gameObject.tag == "Mob")
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Anim.SetInteger("state", 3);
+
+                }
+            }
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    { 
-        if (collision.gameObject.tag == "Player")
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
         {
+            Debug.Log(hitCount);
             hitCount++;
             Debug.Log(hitCount);
+
             if (hitCount == 2)
             {
                 Debug.Log("Morto");
@@ -184,6 +194,7 @@ public class Player : MonoBehaviour
 
         }
     }
+    
 
    
 

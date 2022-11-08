@@ -795,6 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   View: {fileID: 2678366807368597129}
+  chaves: 
   CharacterBody: {fileID: 2495487972227127655}
   Head: {fileID: 6022670665266739592}
   vertical: {x: 0, y: 0, z: 0}
