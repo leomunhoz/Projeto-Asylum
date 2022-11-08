@@ -183,9 +183,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log(hitCount);
-            hitCount++;
-            Debug.Log(hitCount);
+            StartCoroutine(Ataque());
 
             if (hitCount == 2)
             {
