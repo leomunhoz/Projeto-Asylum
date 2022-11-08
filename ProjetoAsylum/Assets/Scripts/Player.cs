@@ -196,7 +196,7 @@ public class Player : MonoBehaviour
     
     IEnumerator Ataque() 
     {
-        Debug.Log(hitCount);
+       
         hitCount++;
         Debug.Log(hitCount);
         yield return new WaitForSeconds(15);
