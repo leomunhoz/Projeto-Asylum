@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 98458254403870262}
-  - component: {fileID: 3505061463877094408}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -33,28 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &3505061463877094408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551669169842504331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &2475321638434246017
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +48,7 @@ GameObject:
   - component: {fileID: 4745720986009058387}
   - component: {fileID: 554482751255362428}
   - component: {fileID: 4198050284253778304}
+  - component: {fileID: 2597394849038115999}
   m_Layer: 0
   m_Name: DoorMesh
   m_TagString: Untagged
@@ -86,8 +64,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2475321638434246017}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.039, y: 0.094, z: -0.009}
-  m_LocalScale: {x: 0.569951, y: 0.60119796, z: 0.49818188}
+  m_LocalPosition: {x: 0.018, y: 0.0953, z: -0.0776}
+  m_LocalScale: {x: 0.5338011, y: 0.60173905, z: 0.49818188}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 98458254403870262}
@@ -174,8 +152,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
+  ObservedComponents:
+  - {fileID: 2597394849038115999}
+  sceneViewId: 3
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!95 &4745720986009058387
@@ -227,3 +206,24 @@ MonoBehaviour:
   porta: {fileID: 4745720986009058387}
   view: {fileID: 2475321638055535126}
   EstaTrigado: 0
+--- !u!114 &2597394849038115999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475321638434246017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 3
+    SynchronizeType: 1
+    Name: state
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0

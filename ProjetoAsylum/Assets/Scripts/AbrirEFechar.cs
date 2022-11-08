@@ -45,10 +45,7 @@ public class AbrirEFechar : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        /*if (other.gameObject.CompareTag("Player"))
-        {
-            EstaTrigado = true;
-        }*/
+       
 
         if (other.gameObject.tag == "Player" && !EstaTrigado)
         {
@@ -60,10 +57,6 @@ public class AbrirEFechar : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        /*if (other.gameObject.CompareTag("Player"))
-        {
-            EstaTrigado = false;
-        }*/
 
         if (other.gameObject.tag == "Player" && EstaTrigado)
         {

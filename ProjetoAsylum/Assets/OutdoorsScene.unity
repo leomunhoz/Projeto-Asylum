@@ -18477,6 +18477,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}
 --- !u!1 &702161922
@@ -42801,14 +42811,6 @@ PrefabInstance:
       propertyPath: porta
       value: 
       objectReference: {fileID: 160098483}
-    - target: {fileID: 1622262060, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
-      propertyPath: sceneViewId
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1622262061, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
-      propertyPath: sceneViewId
-      value: 16
-      objectReference: {fileID: 0}
     - target: {fileID: 4706185638219310500, guid: 516fd0d5b53125c48abf9d5a06873180,
         type: 3}
       propertyPath: m_Name
@@ -42868,11 +42870,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8503344316419997512, guid: 516fd0d5b53125c48abf9d5a06873180,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
