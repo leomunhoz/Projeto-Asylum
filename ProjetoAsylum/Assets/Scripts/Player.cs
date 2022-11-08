@@ -188,6 +188,8 @@ public class Player : MonoBehaviour
             if (hitCount == 2)
             {
                 Anim.SetInteger("state", 3);
+                jumpSpeed = 0;
+                forwardspeed = 2;
                 Debug.Log("PlayerMorto");
             }
 
