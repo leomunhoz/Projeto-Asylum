@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porta: {fileID: 1916742739}
-  view: {fileID: 0}
+  view: {fileID: 2454306476988460118}
   ligar: {fileID: 1916742739}
 --- !u!136 &7679359844644135525
 CapsuleCollider:
