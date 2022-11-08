@@ -9,6 +9,7 @@ TagManager:
   - Mob
   - ligado
   - ligar
+  - Mao
   layers:
   - Default
   - TransparentFX
