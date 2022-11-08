@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     Vector3 strafe;
     public Vector3 vertical;
 
-    private bool podePular = true;
+   // private bool podePular = true;
 
     public float forwardInput;
     public float strafeInput;
@@ -181,11 +181,11 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Mao")
+        if (other.gameObject.tag == "Player")
         {
-            Debug.Log(hitCount);
-            hitCount++;
-            Debug.Log(hitCount);
+            StartCoroutine(Ataque());
+           
+
 
             if (hitCount == 2)
             {
@@ -195,7 +195,13 @@ public class Player : MonoBehaviour
         }
     }
     
-
+    IEnumerator Ataque() 
+    {
+        Debug.Log(hitCount);
+        hitCount++;
+        Debug.Log(hitCount);
+       yield return new WaitForSeconds(15);
+    }
    
 
 }
