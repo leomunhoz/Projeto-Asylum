@@ -2266,6 +2266,7 @@ MonoBehaviour:
   maxHighJump: 3
   timeToMaxHighJump: 0.5
   MeshPlayer: {fileID: 0}
+  VisaoNoturna: {fileID: 4186764327660259422}
 --- !u!114 &4186764328779702398
 MonoBehaviour:
   m_ObjectHideFlags: 0

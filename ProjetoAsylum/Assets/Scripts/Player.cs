@@ -56,6 +56,7 @@ public class Player : MonoBehaviourPunCallbacks
     public static bool IsPhotonMine = false;
     public static int playerRoom = 0;
     public GameObject MeshPlayer;
+    public Light VisaoNoturna;
     
     // Start is called before the first frame update
     void Start()
@@ -68,6 +69,7 @@ public class Player : MonoBehaviourPunCallbacks
         jumpSpeed = (2 * maxHighJump) / timeToMaxHighJump;
         vertical = Vector3.zero;
         Head.gameObject.SetActive(View.IsMine);
+        VisaoNoturna.gameObject.SetActive(View.IsMine);
         chaves = new Boolean[4];
         chaves[0] = false;
         chaves[1] = false;

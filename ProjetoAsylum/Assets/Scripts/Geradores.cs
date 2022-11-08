@@ -57,7 +57,7 @@ public class Geradores : MonoBehaviour
         Debug.Log(countGeradores);
 
        
-        if (countGeradores < 2)
+        if (countGeradores < 4)
         {
             StartCoroutine(Desligar());
         }
