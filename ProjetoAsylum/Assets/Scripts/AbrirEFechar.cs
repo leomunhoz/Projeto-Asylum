@@ -12,7 +12,7 @@ public class AbrirEFechar : MonoBehaviour
     
     
     bool IsOpen = true;
-
+   
     public bool EstaTrigado;
     
 
@@ -29,16 +29,22 @@ public class AbrirEFechar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        abrirPorta();
-       
+        
+        if (EstaTrigado && Player.IsPhotonMine && Input.GetKeyDown(KeyCode.E) && !Player.playerDawn)
+        {
+            Debug.Log("Abir");
+            view.RPC("abrirPorta", RpcTarget.All);
+            
+        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
        
 
-        if (other.gameObject.tag == "Player" && !EstaTrigado)
+        if (other.gameObject.tag == "Player" && !EstaTrigado && other.gameObject.GetComponent<Player>().View.IsMine)
         {
-            
+            Debug.Log("Trigado");
             EstaTrigado = true;
 
         }
@@ -47,9 +53,9 @@ public class AbrirEFechar : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.gameObject.tag == "Player" && EstaTrigado)
+        if (other.gameObject.tag == "Player" && EstaTrigado && other.gameObject.GetComponent<Player>().View.IsMine)
         {
-
+            Debug.Log("NãoTrigado");
             EstaTrigado = false;
 
         }
@@ -57,19 +63,19 @@ public class AbrirEFechar : MonoBehaviour
     [PunRPC]
     public void abrirPorta() 
     {
-        if (EstaTrigado)
+        
+        if (!IsOpen)
         {
-            if (Input.GetKeyDown(KeyCode.E) && !IsOpen)
-            {
-                porta.SetInteger("state", 1);
-                IsOpen = true;
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && IsOpen)
-            {
-                porta.SetInteger("state", 0);
-                IsOpen = false;
-            }
+            IsOpen = true;
+            porta.SetInteger("state", 1);
         }
+        else
+        {
+            IsOpen = false;
+            porta.SetInteger("state", 0);
+        }
+       
+        
     }
 
 

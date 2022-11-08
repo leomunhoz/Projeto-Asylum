@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using System;
+using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviourPunCallbacks
 {
     private CharacterController con;
     public PhotonView View;
@@ -21,6 +22,10 @@ public class Player : MonoBehaviour
     public Vector3 vertical;
 
     private bool podePular = true;
+    public static bool playerDawn = false;
+    public static int PlayersDawn;
+    int LockPlayer = 0;
+
 
     public float forwardInput;
     public float strafeInput;
@@ -48,6 +53,10 @@ public class Player : MonoBehaviour
     public float timeToMaxHighJump = 0.5f;
 
     private bool isWalking;
+    public static bool IsPhotonMine = false;
+    public static int playerRoom = 0;
+    public GameObject MeshPlayer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +73,10 @@ public class Player : MonoBehaviour
         chaves[1] = false;
         chaves[2] = false;
         chaves[3] = false;
+        if (View.IsMine)
+        {
+            IsPhotonMine = true;
+        }
     }
 
 
@@ -177,6 +190,12 @@ public class Player : MonoBehaviour
 
                 }
             }
+
+            if (playerDawn && LockPlayer == 0)
+            {
+                LockPlayer = 1;
+                View.RPC("UpdPlayerDawn", RpcTarget.All);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -185,14 +204,17 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Ataque());
 
-            if (hitCount == 2)
+            if (hitCount >= 2)
             {
                 //Anim.SetInteger("state", 3);
                 jumpSpeed = 0;
                 forwardspeed = 2;
                 maxHighJump = 0;
+                timeToMaxHighJump = 0;
                 vertical = Vector3.zero;
-                
+                playerDawn = true;
+                MeshPlayer.SetActive(false);
+                Debug.Log(MeshPlayer.activeSelf);
                 Debug.Log("PlayerMorto");
             }
 
@@ -206,7 +228,49 @@ public class Player : MonoBehaviour
         Debug.Log(hitCount);
         yield return new WaitForSeconds(15);
     }
+    [PunRPC]
+   private void UpdPlayerDawn() 
+    {
+        PlayersDawn++;
 
-   
+        if (PlayersDawn >= playerRoom)
+        {
+            PhotonNetwork.Disconnect();
+            SceneManager.LoadScene(3);
+        }
+    }
+    [PunRPC]
+    private void CheckHowManyPlayers() 
+    {
+       
+        playerRoom = GameObject.FindGameObjectsWithTag("Player").Length;
+        Debug.Log(playerRoom);
+    }
+    public override void OnJoinedRoom()
+    {
 
+        View.RPC("CheckHowManyPlayers", RpcTarget.All);
+
+    }
+
+    public override void OnLeftRoom()
+    {
+
+        View.RPC("CheckHowManyPlayers", RpcTarget.All);
+
+    }
+
+    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
+    {
+
+        View.RPC("CheckHowManyPlayers", RpcTarget.All);
+
+    }
+
+    public override void OnPlayerLeftRoom(Photon.Realtime.Player newPlayer)
+    {
+
+        View.RPC("CheckHowManyPlayers", RpcTarget.All);
+
+    }
 }

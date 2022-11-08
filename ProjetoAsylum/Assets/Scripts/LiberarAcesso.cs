@@ -13,6 +13,8 @@ public class LiberarAcesso : MonoBehaviour
     
     public Animator ligar;
     bool EstaTrigado;
+    int Lock = 0;
+    bool isOpen;
 
     void Start()
     {
@@ -25,19 +27,27 @@ public class LiberarAcesso : MonoBehaviour
     }
     void Update()
     {
-        Liberar();
+        if (EstaTrigado && Player.IsPhotonMine && Input.GetKeyDown(KeyCode.E) && Lock == 0 && !Player.playerDawn )
+        {
+           
+                
+                Lock = 1;
+                view.RPC("Liberar", RpcTarget.All);
+            
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             EstaTrigado = true;
         }
 
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other )
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             EstaTrigado = false;
         }
@@ -45,24 +55,19 @@ public class LiberarAcesso : MonoBehaviour
     [PunRPC]
     public void Liberar() 
     {
-
-        if (EstaTrigado)
+        count++;
+        ligar.SetInteger("state", 1);
+        if (count >= 4 && !isOpen) 
         {
-            if (Input.GetKeyDown(KeyCode.E) && gameObject.tag == "Ligar")
-            {
-                count++;
-                ligar.SetInteger("state", 1);
-                gameObject.tag = "Ligado";
-            }
-
-        }
-
-        if (count == 4)
-        {
+            isOpen = true;
             porta.SetInteger("state", 1);
             Debug.Log("Aberto");
 
         }
+      
+
+
+
     }
 
 }

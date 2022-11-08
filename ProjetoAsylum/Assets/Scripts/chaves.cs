@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class chaves : MonoBehaviour
 {
-    public Player auxChaves;
+    public InventarioChaves auxChaves;
     public int idChaves;
     bool Trigger;
     // Start is called before the first frame update
     void Start()
     {
-       auxChaves = GetComponent<Player>();
+       auxChaves = GetComponent<InventarioChaves>();
     }
 
     // Update is called once per frame

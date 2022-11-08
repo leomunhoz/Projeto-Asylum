@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 2475321638055535126}
   - component: {fileID: 4745720986009058387}
   - component: {fileID: 554482751255362428}
-  - component: {fileID: 2597394849038115999}
   - component: {fileID: 3076338006234162254}
   m_Layer: 0
   m_Name: DoorMesh
@@ -152,8 +151,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 2597394849038115999}
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -191,27 +189,6 @@ CapsuleCollider:
   m_Height: 4.7555614
   m_Direction: 1
   m_Center: {x: 1.3070121, y: 0.000000119209275, z: 0.0780994}
---- !u!114 &2597394849038115999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2475321638434246017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters:
-  - Type: 3
-    SynchronizeType: 1
-    Name: state
-  m_SynchronizeLayers:
-  - SynchronizeType: 1
-    LayerIndex: 0
 --- !u!114 &3076338006234162254
 MonoBehaviour:
   m_ObjectHideFlags: 0

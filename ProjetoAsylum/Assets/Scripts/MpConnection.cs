@@ -59,12 +59,13 @@ public class MpConnection : MonoBehaviourPunCallbacks
         //Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Vector3 pos = Spawn[PhotonNetwork.CurrentRoom.PlayerCount - 1].position;
        
-        string prefabNane = "Player";
+        string prefabNane = "MonsterPlayer";
        
        if( PhotonNetwork.CurrentRoom.PlayerCount > 1)
         {
             
             prefabNane = "Player";
+
         }
         GameObject player = PhotonNetwork.Instantiate(prefabNane, pos, Quaternion.identity);
 
@@ -104,8 +105,9 @@ public class MpConnection : MonoBehaviourPunCallbacks
 
     public IEnumerator Play() 
     {
+       // PhotonNetwork.JoinLobby();
         SceneManager.LoadScene(1);
-        //PhotonNetwork.JoinLobby();
         yield return new WaitForSeconds(1);
+
     }
 }

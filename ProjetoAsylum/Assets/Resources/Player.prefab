@@ -226,6 +226,7 @@ MonoBehaviour:
   forwardspeed: 4
   maxHighJump: 1
   timeToMaxHighJump: 0.5
+  MeshPlayer: {fileID: 9096226016764049655}
 --- !u!95 &4709938188173646540
 Animator:
   serializedVersion: 4
