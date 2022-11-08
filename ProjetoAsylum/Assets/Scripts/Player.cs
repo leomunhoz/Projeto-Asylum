@@ -181,16 +181,18 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Mob")
         {
             StartCoroutine(Ataque());
 
             if (hitCount == 2)
             {
-                Anim.SetInteger("state", 3);
+                //Anim.SetInteger("state", 3);
                 jumpSpeed = 0;
                 forwardspeed = 2;
                 maxHighJump = 0;
+                vertical = Vector3.zero;
+                
                 Debug.Log("PlayerMorto");
             }
 
