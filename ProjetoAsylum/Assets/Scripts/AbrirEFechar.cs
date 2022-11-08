@@ -10,6 +10,7 @@ public class AbrirEFechar : MonoBehaviour
     public Animator porta;
     public PhotonView view;
     
+    
     bool IsOpen = true;
 
     public bool EstaTrigado;

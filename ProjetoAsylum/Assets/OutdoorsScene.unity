@@ -15388,10 +15388,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 36
-      objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
       propertyPath: sceneViewId
@@ -18428,21 +18424,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.561308
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7267284
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.848585
-      objectReference: {fileID: 0}
-    - target: {fileID: 98458254403870262, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4583515
       objectReference: {fileID: 0}
@@ -18495,50 +18476,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 551669169842504331, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.569951
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.60119796
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.039
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.094
-      objectReference: {fileID: 0}
-    - target: {fileID: 2475321638433888659, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.009
-      objectReference: {fileID: 0}
-    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}
@@ -21665,6 +21602,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}
@@ -38196,10 +38143,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
       propertyPath: sceneViewId
@@ -46004,10 +45947,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 39
-      objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
       propertyPath: sceneViewId
@@ -46891,10 +46830,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
@@ -49140,10 +49075,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
@@ -55951,15 +55882,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 38
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 37
-      objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
       propertyPath: sceneViewId
@@ -55979,6 +55901,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0029
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}
@@ -57149,19 +57076,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: sceneViewId
-      value: 33
-      objectReference: {fileID: 0}
     - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
       propertyPath: sceneViewId
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3505061463877094408, guid: 3841e7876cf8422469fdd6ff5b055824,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}

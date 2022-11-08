@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
 public class LiberarAcesso : MonoBehaviour
 {
     
     private static int count = 0;
     public Animator porta;
+    public PhotonView view;
     
     public Animator ligar;
     bool EstaTrigado;

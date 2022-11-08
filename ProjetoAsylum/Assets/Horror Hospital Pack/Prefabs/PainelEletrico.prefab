@@ -52,7 +52,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 0
+  sceneViewId: 15
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &2975906789664866838
@@ -181,7 +181,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7393432139285796724}
-  sceneViewId: 0
+  sceneViewId: 16
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &7393432139285796724
@@ -308,7 +308,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents: []
-  sceneViewId: 0
+  sceneViewId: 13
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &4706185638219310500
@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porta: {fileID: 1916742739}
+  view: {fileID: 1622262061}
   ligar: {fileID: 1916742739}
 --- !u!136 &7679359844644135525
 CapsuleCollider:
