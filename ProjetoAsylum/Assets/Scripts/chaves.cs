@@ -11,7 +11,7 @@ public class chaves : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       auxChaves = GetComponent<InventarioChaves>();
+       
     }
 
     // Update is called once per frame

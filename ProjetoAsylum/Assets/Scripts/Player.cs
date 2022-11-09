@@ -9,7 +9,7 @@ public class Player : MonoBehaviourPunCallbacks
 {
     private CharacterController con;
     public PhotonView View;
-    public Boolean[] chaves;
+    
     Animator Anim;
     
     public Transform CharacterBody;
@@ -70,11 +70,7 @@ public class Player : MonoBehaviourPunCallbacks
         vertical = Vector3.zero;
         Head.gameObject.SetActive(View.IsMine);
         VisaoNoturna.gameObject.SetActive(View.IsMine);
-        chaves = new Boolean[4];
-        chaves[0] = false;
-        chaves[1] = false;
-        chaves[2] = false;
-        chaves[3] = false;
+       
         if (View.IsMine)
         {
             IsPhotonMine = true;

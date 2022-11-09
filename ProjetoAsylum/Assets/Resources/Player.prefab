@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 2030965484816350265}
   - component: {fileID: 8538656289117607781}
   - component: {fileID: 1355597597024174680}
+  - component: {fileID: 6393880694069012747}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -214,7 +215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   View: {fileID: 7288151603297983759}
-  chaves: 
   CharacterBody: {fileID: 413042371745431775}
   Head: {fileID: 8482339603320312560}
   vertical: {x: 0, y: 0, z: 0}
@@ -227,6 +227,7 @@ MonoBehaviour:
   maxHighJump: 1
   timeToMaxHighJump: 0.5
   MeshPlayer: {fileID: 9096226016764049655}
+  VisaoNoturna: {fileID: 0}
 --- !u!95 &4709938188173646540
 Animator:
   serializedVersion: 4
@@ -292,6 +293,20 @@ CapsuleCollider:
   m_Height: 1.75
   m_Direction: 1
   m_Center: {x: 0, y: 1.07, z: 0}
+--- !u!114 &6393880694069012747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076566425879059045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc914ba8a84eb040a57afffa0b06f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaves: 
+  view: {fileID: 7288151603297983759}
 --- !u!1 &1199263599489208537
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PortaChave : InventarioChaves
+public class PortaChave : MonoBehaviour
 {
-    public Player auxChaves;
+    public InventarioChaves auxChaves;
     public int idChaves;
     public bool Trigger;
     Animator porta;
@@ -13,14 +13,10 @@ public class PortaChave : InventarioChaves
     void Awake()
     {
        porta = GetComponent<Animator>();
-       auxChaves = GetComponent<Player>();
+       
     }
 
-    private void OnValidate()
-    {
-        if (auxChaves == null) auxChaves = GetComponent<Player>();
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
