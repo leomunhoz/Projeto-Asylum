@@ -956,7 +956,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.9716981, g: 0.05958529, b: 0.05958529, a: 1}
   m_Intensity: 25162.371
-  m_Range: 30
+  m_Range: 90
   m_SpotAngle: 83.338455
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -2253,7 +2253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   View: {fileID: 4186764328779702385}
-  chaves: 
   CharacterBody: {fileID: 4186764328779702388}
   Head: {fileID: 4186764328547452940}
   vertical: {x: 0, y: 0, z: 0}

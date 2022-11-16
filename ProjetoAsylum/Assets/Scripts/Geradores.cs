@@ -9,6 +9,7 @@ public class Geradores : MonoBehaviour
 {
     public static int countGeradores = 0;
     bool EstaTrigado;
+    
     [SerializeField]
     PhotonView View;
     public int Lock = 0;
@@ -54,6 +55,7 @@ public class Geradores : MonoBehaviour
     {
 
         countGeradores++;
+       
         Debug.Log(countGeradores);
 
        
@@ -79,7 +81,7 @@ public class Geradores : MonoBehaviour
     
        IEnumerator Desligar() 
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(120);
         Lock = 0;
         countGeradores--;
     }

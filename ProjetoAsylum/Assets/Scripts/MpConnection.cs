@@ -59,7 +59,7 @@ public class MpConnection : MonoBehaviourPunCallbacks
         //Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
         Vector3 pos = Spawn[PhotonNetwork.CurrentRoom.PlayerCount - 1].position;
        
-        string prefabNane = "MonsterPlayer";
+        string prefabNane = "Player";
        
        if( PhotonNetwork.CurrentRoom.PlayerCount > 1)
         {
