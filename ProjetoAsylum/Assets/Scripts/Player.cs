@@ -148,6 +148,8 @@ public class Player : MonoBehaviourPunCallbacks
 
 
             }
+          
+            
 
             if (gameObject.tag == "Player")
             {
@@ -164,10 +166,7 @@ public class Player : MonoBehaviourPunCallbacks
                     vertical = jumpSpeed * Vector3.up;
                     Anim.SetInteger("state", 3);
                 }
-                else
-                {
-
-                }
+               
                 if (vertical.y > 0 && (con.collisionFlags & CollisionFlags.Above) != 0)
                 {
                     vertical = Vector3.zero;

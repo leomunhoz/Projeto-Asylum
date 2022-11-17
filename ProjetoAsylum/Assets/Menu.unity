@@ -3973,7 +3973,6 @@ GameObject:
   - component: {fileID: 1026836192}
   - component: {fileID: 1026836191}
   - component: {fileID: 1026836190}
-  - component: {fileID: 1026836196}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4096,24 +4095,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1026836196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026836189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ef04a36ec5d544d8b3aaca9c5ef258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectionLog: {fileID: 360938044}
-  mySelf: {fileID: 0}
-  PlayerNick: {fileID: 1691082956}
-  Room: {fileID: 1300616310}
-  lockTyping: 0
-  Spawn: []
 --- !u!1001 &1034419618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7429,6 +7410,7 @@ GameObject:
   - component: {fileID: 1761004602}
   - component: {fileID: 1761004601}
   - component: {fileID: 1761004600}
+  - component: {fileID: 1761004603}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7501,9 +7483,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026836196}
+      - m_Target: {fileID: 1761004603}
         m_TargetAssemblyTypeName: MpConnection, Assembly-CSharp
-        m_MethodName: enterValues
+        m_MethodName: OnConnectedToMaster
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7551,6 +7533,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761004598}
   m_CullTransparentMesh: 1
+--- !u!114 &1761004603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761004598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ef04a36ec5d544d8b3aaca9c5ef258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectionLog: {fileID: 360938044}
+  mySelf: {fileID: 0}
+  PlayerNick: {fileID: 0}
+  Room: {fileID: 0}
+  NomeDaCena: OutdoorsScene
+  lockTyping: 0
+  Spawn: []
 --- !u!1 &1781229575
 GameObject:
   m_ObjectHideFlags: 0

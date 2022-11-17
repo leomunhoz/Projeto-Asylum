@@ -14,7 +14,7 @@ public class MpConnection : MonoBehaviourPunCallbacks
     public static string  nickName;
     public TMP_InputField PlayerNick;
     public TMP_InputField Room;
-
+    public string NomeDaCena;
     public static string room;
     public int lockTyping;
     public Transform[] Spawn;
@@ -36,7 +36,7 @@ public class MpConnection : MonoBehaviourPunCallbacks
         connectionLog.text += "Entrando no lobby...\n";
 
 
-        PhotonNetwork.JoinLobby();
+        
         StartCoroutine(Play());
     }
 
@@ -55,11 +55,10 @@ public class MpConnection : MonoBehaviourPunCallbacks
     //--------------------------------------------------------
     public override void OnJoinedRoom()
     {
-        //connectionLog.text += "Entrei na SALA: PUCC!\n";
-        //Debug.Log(PhotonNetwork.CurrentRoom.PlayerCount);
+        
         Vector3 pos = Spawn[PhotonNetwork.CurrentRoom.PlayerCount - 1].position;
        
-        string prefabNane = "Player";
+        string prefabNane = "MonsterPlayer";
        
        if( PhotonNetwork.CurrentRoom.PlayerCount > 1)
         {
@@ -99,14 +98,15 @@ public class MpConnection : MonoBehaviourPunCallbacks
             PlayerNick.interactable = false;
             Room.interactable = false;
             PhotonNetwork.LocalPlayer.NickName = nickName;
-            PhotonNetwork.ConnectUsingSettings();
+            
         }
     }
 
     public IEnumerator Play() 
     {
-       // PhotonNetwork.JoinLobby();
-        SceneManager.LoadScene(1);
+        PhotonNetwork.JoinLobby();
+        PhotonNetwork.ConnectUsingSettings();
+        SceneManager.LoadScene(NomeDaCena);
         yield return new WaitForSeconds(1);
 
     }
