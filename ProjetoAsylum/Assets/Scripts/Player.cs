@@ -1,19 +1,26 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using Photon.Pun;
 using System;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
+
 
 public class Player : MonoBehaviourPunCallbacks
 {
     private CharacterController con;
     public PhotonView View;
+    [SerializeField] private AudioSource[] audioMoviments;
     
+    [SerializeField] private AudioClip[] passos;
+    [SerializeField] private AudioClip[] correr;
+    //[SerializeField] private AudioClip[] Pulos;
     Animator Anim;
     
     public Transform CharacterBody;
     public Transform Head;
+    public GameObject Mao;
 
     int hitCount;
     
@@ -123,6 +130,7 @@ public class Player : MonoBehaviourPunCallbacks
 
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") != 0)
             {
+               
                 forwardspeed = 7f;
                 Anim.SetInteger("state", 2);
                 
@@ -148,8 +156,12 @@ public class Player : MonoBehaviourPunCallbacks
 
 
             }
-          
-            
+
+            vertical += gravity * Time.deltaTime * Vector3.up;
+            if (con.isGrounded)
+            {
+                vertical = Vector3.down;
+            }
 
             if (gameObject.tag == "Player")
             {
@@ -184,9 +196,14 @@ public class Player : MonoBehaviourPunCallbacks
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     Anim.SetInteger("state", 3);
-
+                    Mao.SetActive(true);
                 }
-            }
+               
+            }      
+
+                
+                
+            
 
             if (playerDawn && LockPlayer == 0)
             {
@@ -197,7 +214,7 @@ public class Player : MonoBehaviourPunCallbacks
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Mob")
+        if (other.gameObject.tag == "Mao" )
         {
             StartCoroutine(Ataque());
 
@@ -236,6 +253,31 @@ public class Player : MonoBehaviourPunCallbacks
             SceneManager.LoadScene(3);
         }
     }
+
+    private void Passos()
+    {
+
+        if (!audioMoviments[0].isPlaying )
+        {
+            audioMoviments[0].PlayOneShot(passos[Random.Range(0, passos.Length)]);
+        }
+    }
+
+    private void Correr() 
+    {
+       
+        if (!audioMoviments[1].isPlaying )
+        {
+            audioMoviments[1].PlayOneShot(correr[Random.Range(0, correr.Length)]);
+        }
+    }
+           
+            
+        
+        
+   
+
+
     [PunRPC]
     private void CheckHowManyPlayers() 
     {

@@ -30,7 +30,7 @@ public class Geradores : MonoBehaviour
         {
             
                 Lock = 1;
-                View.RPC("Ligar", RpcTarget.All);
+                View.RPC("Ligar", RpcTarget.AllBuffered);
               
             
         }

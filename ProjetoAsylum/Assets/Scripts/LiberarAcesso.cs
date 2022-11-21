@@ -32,7 +32,7 @@ public class LiberarAcesso : MonoBehaviour
            
                 
                 Lock = 1;
-                view.RPC("Liberar", RpcTarget.All);
+                view.RPC("Liberar", RpcTarget.AllBuffered);
             
 
         }

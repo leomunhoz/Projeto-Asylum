@@ -27,7 +27,7 @@ public class PortaChave : MonoBehaviour
         if (Trigger && Player.IsPhotonMine && Input.GetKeyDown(KeyCode.E))
         {
 
-            View.RPC("abrirPorta", RpcTarget.All);
+            View.RPC("abrirPorta", RpcTarget.AllBuffered);
 
 
         }
