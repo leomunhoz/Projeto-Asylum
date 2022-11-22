@@ -9,6 +9,7 @@ public class AbrirEFechar : MonoBehaviour
 {
     public Animator porta;
     public PhotonView view;
+    public GameObject botao;
     
     
     bool IsOpen = true;
@@ -45,6 +46,7 @@ public class AbrirEFechar : MonoBehaviour
         if (other.gameObject.tag == "Player" && !EstaTrigado && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             Debug.Log("Trigado");
+            botao.SetActive(true);
             EstaTrigado = true;
 
         }
@@ -56,6 +58,7 @@ public class AbrirEFechar : MonoBehaviour
         if (other.gameObject.tag == "Player" && EstaTrigado && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             Debug.Log("NãoTrigado");
+            botao.SetActive(false);
             EstaTrigado = false;
 
         }

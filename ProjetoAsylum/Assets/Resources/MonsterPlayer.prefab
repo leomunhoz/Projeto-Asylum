@@ -2428,12 +2428,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2.65
-  m_Radius: 0.38
+  m_Radius: 0.53
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.38, z: 0.12}
+  m_Center: {x: 0, y: 1.38, z: 0.24}
 --- !u!114 &4186764328779702386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2567,8 +2567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75fea545ea640248ad94deb38d88675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioTrilha: {fileID: 0}
-  Trilha: []
+  audioTrilha: {fileID: 4740242776368906158}
+  Trilha:
+  - {fileID: 8300000, guid: ad71c7d41cc75b3409e2f96ee1f40185, type: 3}
 --- !u!1 &4584576382498077903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,7 +2610,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4584576382498077903}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.2807586, y: 0.22896244, z: 0.31249565}

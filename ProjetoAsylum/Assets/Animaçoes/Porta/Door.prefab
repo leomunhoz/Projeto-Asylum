@@ -63,8 +63,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2475321638434246017}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.018, y: 0.0953, z: -0.0776}
-  m_LocalScale: {x: 0.5338011, y: 0.60173905, z: 0.49818188}
+  m_LocalPosition: {x: -0.039, y: 0.094, z: -0.009}
+  m_LocalScale: {x: 0.569951, y: 0.60119796, z: 0.49818188}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 98458254403870262}
@@ -185,7 +185,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 4.21
+  m_Radius: 2.5
   m_Height: 4.7555614
   m_Direction: 1
   m_Center: {x: 1.3070121, y: 0.000000119209275, z: 0.0780994}
@@ -203,4 +203,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porta: {fileID: 4745720986009058387}
   view: {fileID: 2475321638055535126}
+  botao: {fileID: 0}
   EstaTrigado: 0
