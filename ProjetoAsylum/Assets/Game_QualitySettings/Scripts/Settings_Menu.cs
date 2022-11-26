@@ -34,7 +34,9 @@ public class Settings_Menu : MonoBehaviour
 	[Header("Dropdown")]
 	public Dropdown qualityLevel;
 	public Dropdown resolutionQuality;
+	public Dropdown TextureQuality;
 	public Dropdown antiAliasing;
+	public Dropdown ShadowQuality;
 
 	[Space(7)]
 	[Header("Effects Volume")]
@@ -50,41 +52,14 @@ public class Settings_Menu : MonoBehaviour
 			displayFPS.isOn = true;
 		else
 			displayFPS.isOn = false;
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("Bloom Effect") == 1) // 1 = true , 0 = false
-			bloomEffect.isOn = true;
-		else
-			bloomEffect.isOn = false;
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("Post Effects") == 1) // 1 = true , 0 = false
-			postEffects.isOn = true;
-		else
-			postEffects.isOn = false;
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("Fog Effect") == 1) // 1 = true , 0 = false
-			fogEffect.isOn = true;
-		else
-			fogEffect.isOn = false;
+		
 		//_________________________________________________
 		if (PlayerPrefs.GetInt("vSync") == 1) // 1 = true , 0 = false
 			vSync.isOn = true;
 		else
 			vSync.isOn = false;
 		//_________________________________________________
-		if (PlayerPrefs.GetInt("HDR") == 1) // 1 = true , 0 = false
-			HDR.isOn = true;
-		else
-			HDR.isOn = false;
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("Dynamic Resolution") == 1) // 1 = true , 0 = false
-			dynamicResolution.isOn = true;
-		else
-			dynamicResolution.isOn = false;
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("TAA") == 1) // 1 = true , 0 = false
-			temporalAntiAliasing.isOn = true;
-		else
-			temporalAntiAliasing.isOn = false;
+		
 		//_________________________________________________
 
 		qualityLevel.value = PlayerPrefs.GetInt("Quality Level");
@@ -92,6 +67,8 @@ public class Settings_Menu : MonoBehaviour
 		resolutionQuality.value = PlayerPrefs.GetInt("Resolution Quality");
 
 		antiAliasing.value = PlayerPrefs.GetInt("Anti Aliasing");
+
+		TextureQuality.value = PlayerPrefs.GetInt("Quality Lvel");
 		//_________________________________________________
 
 		#endregion
@@ -129,11 +106,43 @@ public class Settings_Menu : MonoBehaviour
 
 		PlayerPrefs.SetInt("Resolution Quality", resolutionQuality.value);
 	}
-	//______________________________________________
-	#endregion
+    //______________________________________________
+    #endregion
 
-	#region Anti-Aliasing
-	public void Set_Anti_Aliasing()
+    #region TextureQuality
+
+	public void Set_Texture_Quality() 
+	{
+		
+
+        if (TextureQuality.value == 0)
+        {
+			QualitySettings.masterTextureLimit = 0;
+        }
+        else if (TextureQuality.value == 1)
+        {
+			QualitySettings.masterTextureLimit = 1;
+        }
+        else if (TextureQuality.value == 2)
+        {
+			QualitySettings.masterTextureLimit = 2;
+        }
+        else
+        {
+			QualitySettings.masterTextureLimit = 3;
+        }
+
+		PlayerPrefs.SetInt("Texture Quality", TextureQuality.value);
+		
+	}
+
+    #region ShadowQuality
+
+	
+
+
+    #region Anti-Aliasing
+    public void Set_Anti_Aliasing()
 	{
 		PlayerPrefs.SetInt("Anti Aliasing", antiAliasing.value);
 
@@ -167,164 +176,16 @@ public class Settings_Menu : MonoBehaviour
 			GameObject.FindObjectOfType<Load_Settings>().Update_DisplayFPS();
 
 	}
-	//______________________________________________
-	#endregion
-
-	#region Bloom
-	public void Set_Bloom_Effect()
-	{
-		StartCoroutine(Bloom_Effect());
-	}
-
-	IEnumerator Bloom_Effect()
-	{
-		yield return new WaitForEndOfFrame();
-		if (bloomEffect.isOn)
-			PlayerPrefs.SetInt("Bloom Effect", 1);  // 1 = true;
-		else
-			PlayerPrefs.SetInt("Bloom Effect", 0);// 0 = false;
+	
+	
 
 
-		UnityEngine.Rendering.PostProcessing.Bloom vBloom;
+	
+	
 
-		GameObject.FindObjectOfType<UnityEngine.Rendering.PostProcessing.PostProcessVolume>().sharedProfile.TryGetSettings(out vBloom);
-		if (vBloom != null)
-		{
-			if (PlayerPrefs.GetInt("Bloom Effect") == 1)
-				vBloom.active = true;
-			else
-				vBloom.active = false;
-		}
+	
 
-	}
-	//______________________________________________
-	#endregion
-
-	#region Post Effects
-	public void Set_Post_Effects()
-	{
-		StartCoroutine(Post_Effects_Save());
-	}
-
-	IEnumerator Post_Effects_Save()
-	{
-		Camera[] cams = GameObject.FindObjectsOfType<Camera>();
-
-		yield return new WaitForEndOfFrame();
-		if (postEffects.isOn)
-			PlayerPrefs.SetInt("Post Effects", 1);  // 1 = true;
-		else
-			PlayerPrefs.SetInt("Post Effects", 0);// 0 = false;
-
-		if (PlayerPrefs.GetInt("Post Effects") == 1)
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				if (cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>())
-					cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>().enabled = true;
-			}
-		}
-		else
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				if (cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>())
-					cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>().enabled = false;
-			}
-		}
-	}
-	//______________________________________________
-	#endregion
-
-	#region Dynamic Resolution
-	public void Set_Dynamic_Resolution()
-	{
-		StartCoroutine(Dynamic_Resolution());
-	}
-
-	IEnumerator Dynamic_Resolution()
-	{
-		yield return new WaitForEndOfFrame();
-		if (dynamicResolution.isOn)
-			PlayerPrefs.SetInt("Dynamic Resolution", 1);  // 1 = true;
-		else
-			PlayerPrefs.SetInt("Dynamic Resolution", 0);// 0 = false;
-
-		if (PlayerPrefs.GetInt("Dynamic Resolution") == 1)
-		{
-			Camera[] cams = GameObject.FindObjectsOfType<Camera>();
-			for (int a = 0; a < cams.Length; a++)
-				Camera.main.allowDynamicResolution = true;
-		}
-		else
-		{
-			Camera[] cams = GameObject.FindObjectsOfType<Camera>();
-			for (int a = 0; a < cams.Length; a++)
-				Camera.main.allowDynamicResolution = false;
-		}
-	}
-	//______________________________________________
-	#endregion
-
-	#region Temporal Anti Aliasing
-	public void Set_Temporal_AA()
-	{
-		StartCoroutine(Temporal_AA());
-	}
-
-	IEnumerator Temporal_AA()
-	{
-		yield return new WaitForEndOfFrame();
-		if (temporalAntiAliasing.isOn)
-			PlayerPrefs.SetInt("TAA", 1);  // 1 = true;
-		else
-			PlayerPrefs.SetInt("TAA", 0);// 0 = false;
-
-		Camera[] cams = GameObject.FindObjectsOfType<Camera>();
-
-		if (PlayerPrefs.GetInt("TAA") == 1)
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>()
-					.antialiasingMode =
-					UnityEngine.Rendering.PostProcessing.PostProcessLayer.Antialiasing.TemporalAntialiasing;
-			}
-		}
-		else
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>()
-					.antialiasingMode =
-					UnityEngine.Rendering.PostProcessing.PostProcessLayer.Antialiasing.None;
-			}
-		}
-	}
-	//______________________________________________
-	#endregion
-
-	#region Fog
-	public void Set_Fog_Effect()
-	{
-		StartCoroutine(Fog_Effect());
-	}
-
-	IEnumerator Fog_Effect()
-	{
-		yield return new WaitForEndOfFrame();
-		if (fogEffect.isOn)
-			PlayerPrefs.SetInt("Fog Effect", 1);  // 1 = true;
-		else
-			PlayerPrefs.SetInt("Fog Effect", 0);// 0 = false;
-
-		if (PlayerPrefs.GetInt("Fog Effect") == 1)
-			RenderSettings.fog = true;
-		else
-			RenderSettings.fog = false;
-	}
-	//______________________________________________
-	#endregion
+	
 
 	#region V-Sync
 	public void Set_vSync()
@@ -348,32 +209,9 @@ public class Settings_Menu : MonoBehaviour
 	//______________________________________________
 	#endregion
 
-	#region HDR
-	public void Set_HDR()
-	{
-		StartCoroutine(Toggle_HDR());
-	}
 
-	IEnumerator Toggle_HDR()
-	{
-		yield return new WaitForEndOfFrame();
-		if (HDR.isOn)
-			PlayerPrefs.SetInt("HDR", 1);  // 1 = true;
-		else
-			PlayerPrefs.SetInt("HDR", 0);// 0 = false;
-
-		Camera[] cams = GameObject.FindObjectsOfType<Camera>();
-
-		for (int a = 0; a < cams.Length; a++)
-		{
-			if (PlayerPrefs.GetInt("HDR") == 1)
-				cams[a].allowHDR = true;
-			if (PlayerPrefs.GetInt("HDR") == 0)
-				cams[a].allowHDR = false;
-		}
-	}
 	//______________________________________________
-	#endregion
+	
 
 	#region Close Window
 	public void Disable_Object(GameObject target)
@@ -381,5 +219,19 @@ public class Settings_Menu : MonoBehaviour
 		target.SetActive(false);
 
 	}
-    #endregion
+	#endregion
+
+	#region OpenWindow
+
+	public void Enable_Object(GameObject target) 
+	{
+		target.SetActive(true);
+	
+	
+	}
+
 }
+#endregion
+#endregion
+#endregion
+

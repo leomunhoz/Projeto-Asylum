@@ -37,13 +37,9 @@ public class Load_Settings : MonoBehaviour
 		{
 			// Se the default settings for effects
 			PlayerPrefs.SetInt("Display FPS", 0);
-			PlayerPrefs.SetInt("Bloom Effect", 0);
-			PlayerPrefs.SetInt("Post Effects", 0);
-			PlayerPrefs.SetInt("Fog Effect", 0);
-			PlayerPrefs.SetInt("Dynamic Resolution", 0);
+		
 			PlayerPrefs.SetInt("vSync", 0);
-			PlayerPrefs.SetInt("TAA", 0);
-			PlayerPrefs.SetInt("HDR", 0);
+			
 
 			// Set the default quality level
 			PlayerPrefs.SetInt("Quality Level", 0);
@@ -80,105 +76,7 @@ public class Load_Settings : MonoBehaviour
 				Destroy(dFPS[a]);
 		}
 
-		//_________________________________________________
-		UnityEngine.Rendering.PostProcessing.Bloom vBloom;
-
-		if(globalVolume)
-			globalVolume.sharedProfile.TryGetSettings(out vBloom);
-		else
-			GameObject.FindObjectOfType<UnityEngine.Rendering.PostProcessing.PostProcessVolume>().sharedProfile.TryGetSettings(out vBloom);
 		
-		if (vBloom != null)
-		{
-			if (PlayerPrefs.GetInt("Bloom Effect") == 1)
-				vBloom.active = true;
-			else
-				vBloom.active = false;
-		}
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("Post Effects") == 1)
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				if (cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>())
-					cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>().enabled = true;
-			}
-		}
-		else
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				if (cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>())
-					cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>().enabled = false;
-			}
-		}       
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("Fog Effect") == 1)
-			RenderSettings.fog = true;
-		else
-			RenderSettings.fog = false;
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("Dynamic Resolution") == 1)
-        {
-			for(int a = 0;a< cams.Length;a++)
-				cams[a].allowDynamicResolution = true;
-		}
-		else
-		{
-			for (int a = 0; a < cams.Length; a++)
-				cams[a].allowDynamicResolution = false;
-		}
-		//_________________________________________________
-		if (isFirstScene)
-		{
-			if (PlayerPrefs.GetInt("Resolution Quality") == 2)
-			{
-				Screen.SetResolution((int)(PlayerPrefs.GetInt("OriginalX") * 0.5f),
-					(int)(PlayerPrefs.GetInt("OriginalY") * 0.5f), true);
-			}
-			if (PlayerPrefs.GetInt("Resolution Quality") == 1)
-			{
-				Screen.SetResolution((int)(PlayerPrefs.GetInt("OriginalX") * 0.7f),
-					(int)(PlayerPrefs.GetInt("OriginalY") * 0.7f), true);
-			}
-			if (PlayerPrefs.GetInt("Resolution Quality") == 0)
-			{
-				Screen.SetResolution((int)(PlayerPrefs.GetInt("OriginalX") * 1),
-					(int)(PlayerPrefs.GetInt("OriginalY") * 1), true);
-			}
-			//_________________________________________________
-			
-			if(PlayerPrefs.GetInt("Anti Aliasing") == 0)
-				QualitySettings.antiAliasing = 0;
-			if (PlayerPrefs.GetInt("Anti Aliasing") == 1)
-				QualitySettings.antiAliasing = 2;
-			if (PlayerPrefs.GetInt("Anti Aliasing") == 2)
-				QualitySettings.antiAliasing = 4;
-			if (PlayerPrefs.GetInt("Anti Aliasing") == 3)
-				QualitySettings.antiAliasing = 8;
-
-			QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality Level"), false);
-
-		}
-		//_________________________________________________
-		if (PlayerPrefs.GetInt("TAA") == 1)
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>()
-					.antialiasingMode =
-					UnityEngine.Rendering.PostProcessing.PostProcessLayer.Antialiasing.TemporalAntialiasing;
-			}
-		}
-		else
-		{
-			for (int a = 0; a < cams.Length; a++)
-			{
-				cams[a].GetComponent<UnityEngine.Rendering.PostProcessing.PostProcessLayer>()
-					.antialiasingMode =
-					UnityEngine.Rendering.PostProcessing.PostProcessLayer.Antialiasing.None;
-			}
-		}
 		//_________________________________________________
 		if (PlayerPrefs.GetInt("vSync") == 0)
 			QualitySettings.vSyncCount = 0;

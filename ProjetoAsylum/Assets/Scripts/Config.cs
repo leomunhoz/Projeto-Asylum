@@ -5,9 +5,9 @@ using UnityEngine;
 public class Config : MonoBehaviour
 {
     public GameObject Menu;
-    public GameObject Grafico;
-    public GameObject resolucao;
+    public GameObject SettingsMenu;
     public GameObject config;
+     
     void Start()
     {
         
@@ -22,41 +22,21 @@ public class Config : MonoBehaviour
    public void settings() 
     {
         Menu.SetActive(false);
-        config.SetActive(true);    
+        SettingsMenu.SetActive(true);    
     }
 
-   public void grafico() 
-    {
-        config.SetActive(false);
-        Grafico.SetActive(true);
-    
-    }
+   
 
-   public void Resolucao() 
-    {
-        config.SetActive(false);
-        resolucao.SetActive(true);  
-
-    }
+   
 
     public void voltarSettings() 
     {
         Menu.SetActive(true);
-        config.SetActive(false);
+        SettingsMenu.SetActive(false);
 
     }
 
-    public void voltarGrafico() 
-    {
-        config.SetActive(true);
-        Grafico.SetActive(false);
+   
 
-    }
-
-    public void voltarResolucao() 
-    {
-        config.SetActive(true);
-        resolucao.SetActive(false);
-
-    }
+    
 }
