@@ -214,11 +214,11 @@ public class Player : MonoBehaviourPunCallbacks
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Mao" )
+        if (other.gameObject.tag == "Mob" )
         {
             StartCoroutine(Ataque());
 
-            if (hitCount >= 2)
+            if (hitCount >= 4)
             {
                 //Anim.SetInteger("state", 3);
                 jumpSpeed = 0;
@@ -240,7 +240,7 @@ public class Player : MonoBehaviourPunCallbacks
        
         hitCount++;
         Debug.Log(hitCount);
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(35);
     }
     [PunRPC]
    private void UpdPlayerDawn() 

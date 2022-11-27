@@ -6,7 +6,7 @@ public class Config : MonoBehaviour
 {
     public GameObject Menu;
     public GameObject SettingsMenu;
-    public GameObject config;
+    public GameObject connection;
      
     void Start()
     {
@@ -26,8 +26,18 @@ public class Config : MonoBehaviour
     }
 
    
+    public void Connect() 
+    {
+        Menu.SetActive(false);
+        connection.SetActive(true);
+    }
 
-   
+    public void voltarMenu()
+    {
+        Menu.SetActive(true);
+       connection.SetActive(false);
+
+    }
 
     public void voltarSettings() 
     {

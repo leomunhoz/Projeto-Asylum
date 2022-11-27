@@ -36,8 +36,7 @@ public class Settings_Menu : MonoBehaviour
 	public Dropdown resolutionQuality;
 	public Dropdown TextureQuality;
 	public Dropdown antiAliasing;
-	public Dropdown ShadowQuality;
-
+	
 	[Space(7)]
 	[Header("Effects Volume")]
 	public UnityEngine.Rendering.PostProcessing.PostProcessVolume globalVolume;
@@ -136,9 +135,9 @@ public class Settings_Menu : MonoBehaviour
 		
 	}
 
-    #region ShadowQuality
+    
 
-	
+
 
 
     #region Anti-Aliasing
@@ -176,19 +175,20 @@ public class Settings_Menu : MonoBehaviour
 			GameObject.FindObjectOfType<Load_Settings>().Update_DisplayFPS();
 
 	}
-	
-	
+    #endregion
 
 
-	
-	
 
-	
 
-	
 
-	#region V-Sync
-	public void Set_vSync()
+
+
+
+
+
+
+    #region V-Sync
+    public void Set_vSync()
 	{
 		StartCoroutine(v_Sync());
 	}
@@ -229,9 +229,7 @@ public class Settings_Menu : MonoBehaviour
 	
 	
 	}
+    #endregion
 
 }
 #endregion
-#endregion
-#endregion
-
