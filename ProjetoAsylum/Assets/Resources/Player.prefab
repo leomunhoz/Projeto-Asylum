@@ -188,7 +188,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3bd1b93317b7a3a49b13011cdaa64d0b, type: 3}
   - {fileID: 8300000, guid: 7b4b6eb734482064c8c1e5fd45d4d76c, type: 3}
   - {fileID: 8300000, guid: fba95cafa5bba8649a7d269656e7317b, type: 3}
-  CharacterBody: {fileID: 1061375497543899724}
+  CharacterBody: {fileID: 630535512640088976}
   Head: {fileID: 662163394571445448}
   Mao: {fileID: 0}
   vertical: {x: 0, y: 0, z: 0}
