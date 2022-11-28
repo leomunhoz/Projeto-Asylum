@@ -11,6 +11,8 @@ public class PortaChave : MonoBehaviour
     public int idChaves;
     public GameObject UI;
     public GameObject UI2;
+    public AudioSource Audio;
+    public AudioClip AudioSom;
     public PhotonView View;
     public bool Trigger;
     Animator porta;
@@ -42,6 +44,7 @@ public class PortaChave : MonoBehaviour
         {
             porta.SetInteger("state", 1);
             UI.SetActive(true);
+            Audio.PlayOneShot(AudioSom);
             UI2.SetActive(false);
 
         }

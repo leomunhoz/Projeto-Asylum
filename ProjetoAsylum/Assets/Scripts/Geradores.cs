@@ -10,6 +10,8 @@ public class Geradores : MonoBehaviour
     public static int countGeradores = 0;
     bool EstaTrigado;
     public GameObject UI;
+    public AudioClip audioSom;
+    public  AudioSource audio;
     [SerializeField]
     PhotonView View;
     public int Lock = 0;
@@ -57,13 +59,14 @@ public class Geradores : MonoBehaviour
     {
 
         countGeradores++;
-       
+        audio.PlayOneShot(audioSom);
         Debug.Log(countGeradores);
 
        
         if (countGeradores < 4)
         {
             StartCoroutine(Desligar());
+            
         }
         else
         {
@@ -84,6 +87,7 @@ public class Geradores : MonoBehaviour
        IEnumerator Desligar() 
     {
         yield return new WaitForSeconds(120);
+        
         Lock = 0;
         countGeradores--;
     }

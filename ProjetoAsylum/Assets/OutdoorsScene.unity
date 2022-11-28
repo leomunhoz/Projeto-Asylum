@@ -19429,15 +19429,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4856336461430574, guid: df2f14ece3a3a0847aad4f1407b39c50, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4856336461430574, guid: df2f14ece3a3a0847aad4f1407b39c50, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4856336461430574, guid: df2f14ece3a3a0847aad4f1407b39c50, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4856336461430574, guid: df2f14ece3a3a0847aad4f1407b39c50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19445,12 +19445,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4856336461430574, guid: df2f14ece3a3a0847aad4f1407b39c50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 4856336461430574, guid: df2f14ece3a3a0847aad4f1407b39c50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2237957838252656970, guid: df2f14ece3a3a0847aad4f1407b39c50,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1046d584686ed5947af18ec5c95dbbac, type: 2}
     - target: {fileID: 6301273204276158952, guid: df2f14ece3a3a0847aad4f1407b39c50,
         type: 3}
       propertyPath: sceneViewId
@@ -23484,34 +23489,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 106203896413897835, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 551669169842504331, guid: 3841e7876cf8422469fdd6ff5b055824,
         type: 3}
       propertyPath: m_Name
       value: Door (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: sceneViewId
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3076338006234162254, guid: 3841e7876cf8422469fdd6ff5b055824,
-        type: 3}
-      propertyPath: botao
-      value: 
-      objectReference: {fileID: 696026402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}
---- !u!1 &696026402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 106203896413897835, guid: 3841e7876cf8422469fdd6ff5b055824,
-    type: 3}
-  m_PrefabInstance: {fileID: 696026401}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &702161922
 GameObject:
   m_ObjectHideFlags: 0
@@ -26924,7 +26908,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 44a7dc1b4c17e1a489884e5dc6f77949, type: 2}
+      objectReference: {fileID: 9100000, guid: bf1e56fed24fe064fb3cab400bcf03f5, type: 2}
     - target: {fileID: 6301273204276158952, guid: df2f14ece3a3a0847aad4f1407b39c50,
         type: 3}
       propertyPath: sceneViewId
@@ -61457,6 +61441,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2237957838252656970, guid: df2f14ece3a3a0847aad4f1407b39c50,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1603042c6c167ce44bace2de237b3bf4, type: 2}
     - target: {fileID: 6301273204276158952, guid: df2f14ece3a3a0847aad4f1407b39c50,
         type: 3}
       propertyPath: sceneViewId
@@ -62678,7 +62667,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 44a7dc1b4c17e1a489884e5dc6f77949, type: 2}
+      objectReference: {fileID: 9100000, guid: cf1f0d439caa71e44b7b28b7b41d95a6, type: 2}
     - target: {fileID: 6301273204276158952, guid: df2f14ece3a3a0847aad4f1407b39c50,
         type: 3}
       propertyPath: sceneViewId

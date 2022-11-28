@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -183,7 +183,7 @@ AudioSource:
   MinDistance: 10
   MaxDistance: 20.365425
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -216,7 +216,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2570,6 +2570,7 @@ MonoBehaviour:
   audioTrilha: {fileID: 4740242776368906158}
   Trilha:
   - {fileID: 8300000, guid: ad71c7d41cc75b3409e2f96ee1f40185, type: 3}
+  - {fileID: 8300000, guid: a8ea8570e5f92fd47867a548620f6d0e, type: 3}
 --- !u!1 &4584576382498077903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +2671,7 @@ AudioSource:
   MinDistance: 8
   MaxDistance: 12.240914
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -2703,7 +2704,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
