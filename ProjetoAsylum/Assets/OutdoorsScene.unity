@@ -22428,6 +22428,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SImple_03 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6787684976425561989, guid: 609cad5eb478dd849beaf2705286bdf7,
+        type: 3}
+      propertyPath: idChaves
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609cad5eb478dd849beaf2705286bdf7, type: 3}
 --- !u!1001 &653458193
@@ -23493,6 +23498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475321638055535126, guid: 3841e7876cf8422469fdd6ff5b055824,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3841e7876cf8422469fdd6ff5b055824, type: 3}
@@ -75114,6 +75124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SImple_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6787684976425561989, guid: 609cad5eb478dd849beaf2705286bdf7,
+        type: 3}
+      propertyPath: idChaves
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 609cad5eb478dd849beaf2705286bdf7, type: 3}
