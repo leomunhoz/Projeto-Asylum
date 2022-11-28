@@ -218,9 +218,9 @@ public class Player : MonoBehaviourPunCallbacks
         {
             StartCoroutine(Ataque());
 
-            if (hitCount >= 2)
+            if (hitCount >= 4)
             {
-                //Anim.SetInteger("state", 3);
+                Anim.SetInteger("state", 4);
                 jumpSpeed = 0;
                 forwardspeed = 2;
                 maxHighJump = 0;
@@ -240,7 +240,7 @@ public class Player : MonoBehaviourPunCallbacks
        
         hitCount++;
         Debug.Log(hitCount);
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(35);
     }
     [PunRPC]
    private void UpdPlayerDawn() 
@@ -268,6 +268,7 @@ public class Player : MonoBehaviourPunCallbacks
        
         if (!audioMoviments[1].isPlaying )
         {
+            Debug.Log("Correndo");
             audioMoviments[1].PlayOneShot(correr[Random.Range(0, correr.Length)]);
         }
     }
