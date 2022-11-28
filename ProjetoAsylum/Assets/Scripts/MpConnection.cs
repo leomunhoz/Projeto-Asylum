@@ -60,10 +60,10 @@ public class MpConnection : MonoBehaviourPunCallbacks
         
         string prefabNane = "Player";
        
-       if(GameObject.Find("Player") == null)
+       if(GameObject.Find("MonsterPlayer") == null)
         {
             
-            prefabNane = "Player";
+            prefabNane = "MonsterPlayer";
 
         }
         GameObject player = PhotonNetwork.Instantiate(prefabNane, pos, Quaternion.identity);
