@@ -215,7 +215,7 @@ public class Player : MonoBehaviourPunCallbacks
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Mao" )
+        if (other.gameObject.tag == "Mob" )
         {
             StartCoroutine(Ataque());
 
