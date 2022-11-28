@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6216514601498117373}
   - component: {fileID: 4588226886113845421}
   - component: {fileID: 919132147504929099}
+  - component: {fileID: 5552447365073626068}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -207,6 +208,21 @@ MonoBehaviour:
   audioTrilha: {fileID: 161361464868764079}
   Trilha:
   - {fileID: 8300000, guid: ad71c7d41cc75b3409e2f96ee1f40185, type: 3}
+--- !u!111 &5552447365073626068
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428145192962883830}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &447398451902800813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,7 +1658,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2090,7 +2106,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5264454914103742123, guid: bb619aaa8fab658408da61cc89b5d808, type: 3}
+  - {fileID: 2100000, guid: 0a462264c9feedb4faa50740b5c22696, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2559,7 +2575,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2688,7 +2704,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 2
   Loop: 0
   Mute: 0
   Spatialize: 0

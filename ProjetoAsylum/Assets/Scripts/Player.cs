@@ -81,6 +81,7 @@ public class Player : MonoBehaviourPunCallbacks
         if (View.IsMine)
         {
             IsPhotonMine = true;
+            MeshPlayer.SetActive(false);
         }
     }
 
