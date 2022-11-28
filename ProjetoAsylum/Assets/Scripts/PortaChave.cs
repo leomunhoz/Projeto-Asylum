@@ -9,6 +9,8 @@ public class PortaChave : MonoBehaviour
 {
     public InventarioChaves auxChaves;
     public int idChaves;
+    public GameObject UI;
+    public GameObject UI2;
     public PhotonView View;
     public bool Trigger;
     Animator porta;
@@ -39,6 +41,8 @@ public class PortaChave : MonoBehaviour
         if (auxChaves.chaves[idChaves] == true)
         {
             porta.SetInteger("state", 1);
+            UI.SetActive(true);
+            UI2.SetActive(false);
 
         }
     }
@@ -47,10 +51,13 @@ public class PortaChave : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Trigger = true;
+            UI2.SetActive(true);
+           
         }
     }
     private void OnTriggerExit(Collider other)
     {
         Trigger = false;
+        UI2.SetActive(false);
     }
 }

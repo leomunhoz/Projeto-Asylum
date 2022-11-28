@@ -851,9 +851,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 55834910}
-        m_TargetAssemblyTypeName: TrocaDeCenas, Assembly-CSharp
-        m_MethodName: JogarEtrocarCena
+      - m_Target: {fileID: 1026836191}
+        m_TargetAssemblyTypeName: Config, Assembly-CSharp
+        m_MethodName: Connect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1278,7 +1278,7 @@ RectTransform:
   - {fileID: 1009290428}
   - {fileID: 1392875755}
   m_Father: {fileID: 1026836195}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4261,7 +4261,6 @@ GameObject:
   - component: {fileID: 419563823}
   - component: {fileID: 419563822}
   - component: {fileID: 419563821}
-  - component: {fileID: 419563824}
   m_Layer: 5
   m_Name: Display
   m_TagString: Untagged
@@ -4286,7 +4285,7 @@ RectTransform:
   - {fileID: 1038948710}
   - {fileID: 863550288}
   m_Father: {fileID: 1756547881}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4349,7 +4348,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 419563824}
+      - m_Target: {fileID: 1026836190}
         m_TargetAssemblyTypeName: "Resolu\xE7oesEQualidade, Assembly-CSharp"
         m_MethodName: DisplayMode
         m_Mode: 1
@@ -4400,19 +4399,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419563819}
   m_CullTransparentMesh: 1
---- !u!114 &419563824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419563819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9aa04da1f64e9ec4fbec308c6149d1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayMode: {fileID: 0}
 --- !u!1 &457318870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6260,6 +6246,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 9.213936
       objectReference: {fileID: 0}
+    - target: {fileID: 8944353506670762784, guid: db925c6905f4b9144bf793d8b0ae2e97,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944353506670762784, guid: db925c6905f4b9144bf793d8b0ae2e97,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1026836191}
+    - target: {fileID: 8944353506670762784, guid: db925c6905f4b9144bf793d8b0ae2e97,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: voltarSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944353506670762784, guid: db925c6905f4b9144bf793d8b0ae2e97,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Config, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944353506670762784, guid: db925c6905f4b9144bf793d8b0ae2e97,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944353506670762784, guid: db925c6905f4b9144bf793d8b0ae2e97,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8944353506670762785, guid: db925c6905f4b9144bf793d8b0ae2e97,
         type: 3}
       propertyPath: m_Type
@@ -7779,7 +7795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa04da1f64e9ec4fbec308c6149d1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayMode: {fileID: 0}
+  displayMode: {fileID: 419563821}
 --- !u!114 &1026836191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7794,7 +7810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Menu: {fileID: 82280723}
   SettingsMenu: {fileID: 194177169}
-  config: {fileID: 168791197}
+  Connetion: {fileID: 1603043355}
 --- !u!114 &1026836192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7870,6 +7886,7 @@ RectTransform:
   m_Children:
   - {fileID: 457318871}
   - {fileID: 168791198}
+  - {fileID: 1603043356}
   - {fileID: 82280724}
   - {fileID: 1682305046}
   - {fileID: 1756547881}
@@ -11755,7 +11772,7 @@ RectTransform:
   - {fileID: 1403118823}
   - {fileID: 1211052948}
   m_Father: {fileID: 1756547881}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11837,9 +11854,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1475200988}
-        m_TargetAssemblyTypeName: "Resolu\xE7oesEQualidade, Assembly-CSharp"
-        m_MethodName: DisplayMode
+      - m_Target: {fileID: 1756547882}
+        m_TargetAssemblyTypeName: Settings_Menu, Assembly-CSharp
+        m_MethodName: Set_Texture_Quality
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12863,19 +12880,19 @@ RectTransform:
   m_GameObject: {fileID: 1603043355}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.31676847, y: 0.31676847, z: 0.31676847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 761791127}
   - {fileID: 1781229576}
   - {fileID: 1761004599}
   - {fileID: 360938046}
-  m_Father: {fileID: 1756547881}
-  m_RootOrder: 8
+  m_Father: {fileID: 1026836195}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -158.35077, y: -46.560944}
+  m_AnchoredPosition: {x: -499.89, y: -146.98999}
   m_SizeDelta: {x: 1002.8, y: 740.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1612450623 stripped
@@ -13835,7 +13852,7 @@ RectTransform:
   - {fileID: 1944460764}
   - {fileID: 814739951}
   m_Father: {fileID: 1026836195}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14278,6 +14295,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 853552973}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1756547882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8944353507847952144, guid: db925c6905f4b9144bf793d8b0ae2e97,
+    type: 3}
+  m_PrefabInstance: {fileID: 853552973}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194177169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab8195cab176e343b239b6c8b1eb22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1761004598
 GameObject:
   m_ObjectHideFlags: 0

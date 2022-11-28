@@ -9,7 +9,7 @@ public class Geradores : MonoBehaviour
 {
     public static int countGeradores = 0;
     bool EstaTrigado;
-    
+    public GameObject UI;
     [SerializeField]
     PhotonView View;
     public int Lock = 0;
@@ -40,6 +40,7 @@ public class Geradores : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             EstaTrigado = true;
+            UI.SetActive(true);
         }
 
     }
@@ -48,6 +49,7 @@ public class Geradores : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             EstaTrigado = false;
+            UI.SetActive(false);    
         }
     }
     [PunRPC]

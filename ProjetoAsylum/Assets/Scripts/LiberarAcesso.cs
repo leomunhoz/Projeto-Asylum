@@ -9,6 +9,7 @@ public class LiberarAcesso : MonoBehaviour
     
     private static int count = 0;
     public Animator porta;
+    public GameObject UI;
     public PhotonView view;
     
     public Animator ligar;
@@ -42,6 +43,7 @@ public class LiberarAcesso : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             EstaTrigado = true;
+            UI.SetActive(true);
         }
 
     }
@@ -50,6 +52,7 @@ public class LiberarAcesso : MonoBehaviour
         if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player>().View.IsMine)
         {
             EstaTrigado = false;
+            UI.SetActive(false);    
         }
     }
     [PunRPC]
