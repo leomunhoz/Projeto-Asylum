@@ -59,16 +59,13 @@ public class MpConnection : MonoBehaviourPunCallbacks
         Vector3 pos = Spawn[PhotonNetwork.CurrentRoom.PlayerCount - 1].position;
         
         string prefabNane = "Player";
-
-
-        if (GameObject.Find("Player") == null)
-        {
-            prefabNane = "Player";
-        }
-           
-        
        
-      
+       if( PhotonNetwork.CurrentRoom.PlayerCount > 1)
+        {
+            
+            prefabNane = "Player";
+
+        }
         GameObject player = PhotonNetwork.Instantiate(prefabNane, pos, Quaternion.identity);
         player.name = prefabNane;
         mySelf = player.GetComponent<Player>();

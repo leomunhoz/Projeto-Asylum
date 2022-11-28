@@ -7,7 +7,6 @@ public class chaves : MonoBehaviour
 {
     public InventarioChaves auxChaves;
     public int idChaves;
-    public GameObject UIChaves;
     bool Trigger;
     // Start is called before the first frame update
     void Start()
@@ -32,13 +31,11 @@ public class chaves : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            UIChaves.SetActive(true);
             Trigger = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        UIChaves.SetActive(false);
         Trigger = false;
     }
 }
