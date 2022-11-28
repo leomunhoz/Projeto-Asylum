@@ -66,6 +66,10 @@ public class MpConnection : MonoBehaviourPunCallbacks
             prefabNane = "MonsterPlayer";
 
         }
+        else
+        {
+            prefabNane = "Player";
+        }
         GameObject player = PhotonNetwork.Instantiate(prefabNane, pos, Quaternion.identity);
         player.name = prefabNane;
         mySelf = player.GetComponent<Player>();
